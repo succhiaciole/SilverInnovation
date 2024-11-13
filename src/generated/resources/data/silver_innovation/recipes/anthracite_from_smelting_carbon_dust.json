@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 500,
+  "experience": 0.75,
+  "group": "anthracite",
+  "ingredient": {
+    "item": "silver_innovation:carbon_dust"
+  },
+  "result": "silver_innovation:anthracite"
+}

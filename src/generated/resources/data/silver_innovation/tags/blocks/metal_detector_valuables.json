@@ -1,0 +1,9 @@
+{
+  "values": [
+    "silver_innovation:silver_ore",
+    "silver_innovation:deepslate_silver_ore",
+    "silver_innovation:deepslate_carbon_ore",
+    "silver_innovation:carbon_ore",
+    "#forge:ores"
+  ]
+}

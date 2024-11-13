@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "silver_innovation:silver_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "silver_innovation:silver_nugget"
+  }
+}

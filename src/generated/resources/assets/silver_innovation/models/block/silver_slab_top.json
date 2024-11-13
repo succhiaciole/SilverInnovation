@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "silver_innovation:block/silver_block",
+    "side": "silver_innovation:block/silver_block",
+    "top": "silver_innovation:block/silver_block"
+  }
+}

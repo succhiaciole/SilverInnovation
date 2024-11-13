@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "silver_innovation:block/carbon_dust_block"
+  }
+}

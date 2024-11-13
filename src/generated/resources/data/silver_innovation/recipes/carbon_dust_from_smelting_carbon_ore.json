@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "carbon",
+  "ingredient": {
+    "item": "silver_innovation:carbon_ore"
+  },
+  "result": "silver_innovation:carbon_dust"
+}

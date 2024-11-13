@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "silver_innovation:item/silver_helmet",
+    "layer1": "minecraft:trims/items/helmet_trim_netherite"
+  }
+}

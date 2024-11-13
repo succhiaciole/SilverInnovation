@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "carbon",
+  "ingredient": {
+    "item": "silver_innovation:carbon_ore"
+  },
+  "result": "silver_innovation:carbon_dust"
+}

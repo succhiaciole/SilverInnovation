@@ -1,0 +1,18 @@
+{
+  "silver_bow" : {
+    "subtitles" : "sounds.silver_innovation.silver_bow",
+    "sounds" : [
+    "silver_innovation:silver_bow_1",
+    "silver_innovation:silver_bow_2",
+    "silver_innovation:silver_bow_3"
+    ]
+  },
+  "silver_longbow" : {
+    "subtitles" : "sounds.silver_innovation.silver_longbow",
+    "sounds" : [
+      "silver_innovation:silver_longbow_1",
+      "silver_innovation:silver_longbow_2",
+      "silver_innovation:silver_longbow_3"
+    ]
+  }
+}

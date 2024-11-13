@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "silver_innovation:block/silver_slab"
+    },
+    "type=double": {
+      "model": "silver_innovation:block/silver_block"
+    },
+    "type=top": {
+      "model": "silver_innovation:block/silver_slab_top"
+    }
+  }
+}

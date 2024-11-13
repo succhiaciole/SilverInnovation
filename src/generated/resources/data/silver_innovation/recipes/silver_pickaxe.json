@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "silver_innovation:silver_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "item": "silver_innovation:silver_pickaxe"
+  },
+  "show_notification": true
+}

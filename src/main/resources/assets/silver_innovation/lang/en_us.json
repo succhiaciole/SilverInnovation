@@ -1,0 +1,62 @@
+{
+  "item.silver_innovation.silver_ingot" : "Silver Ingot",
+  "item.silver_innovation.silver_nugget" : "Silver Nugget",
+  "item.silver_innovation.raw_silver" : "Raw Silver",
+  "item.silver_innovation.carbon_dust" : "Carbon Dust",
+
+  "item.silver_innovation.red_test" : "RED TEST",
+  "item.silver_innovation.silver_golem_spawn_egg" : "Silver Golem Spawn Egg",
+  "item.silver_innovation.silver_bow" : "Silver Bow",
+  "item.silver_innovation.silver_longbow" : "Silver Longbow",
+  "item.silver_innovation.silver_missle" : "Silver Missle",
+
+  "item.silver_innovation.silver_helmet" : "Silver Helmet",
+  "item.silver_innovation.silver_chestplate" : "Silver Chestplate",
+  "item.silver_innovation.silver_leggings" : "Silver Leggings",
+  "item.silver_innovation.silver_boots" : "Silver Boots",
+
+  "item.silver_innovation.silver_sword" : "Silver Sword",
+  "item.silver_innovation.silver_pickaxe" : "Silver Pickaxe",
+  "item.silver_innovation.silver_axe" : "Silver Axe",
+  "item.silver_innovation.silver_shovel" : "Silver Shovel",
+  "item.silver_innovation.silver_hoe" : "Silver Hoe",
+
+  "item.silver_innovation.strawberry" : "Strawberry",
+  "item.silver_innovation.silver_strawberry" : "Silver Strawberry",
+  "item.silver_innovation.strawberry_seeds" : "Strawberry Seeds",
+
+  "item.silver_innovation.anthracite" : "Anthracite",
+
+  "item.silver_innovation.metal_detector" : "Metal Detector",
+  "item.silver_innovation.arnold_sword" : "Arnold Sword",
+
+  "creativetab.silver_innovation" : "Silver Innovation",
+  "creativetab.tests" : "Tests",
+
+  "block.silver_innovation.silver_block" : "Block Of Silver",
+  "block.silver_innovation.raw_silver_block" : "Block Of Raw Silver",
+  "block.silver_innovation.silver_ore" : "Silver Ore",
+  "block.silver_innovation.deepslate_silver_ore" : "Deepslate Silver Ore",
+  "block.silver_innovation.deepslate_carbon_ore" : "Deepslate Carbon Ore",
+  "block.silver_innovation.carbon_ore" : "Carbon Ore",
+  "block.silver_innovation.carbon_dust_block" : "Carbon Of Carbon Dust",
+  "block.silver_innovation.silverer_table" : "Silverer Table",
+
+  "block.silver_innovation.silver_stairs" : "Silver Stairs",
+  "block.silver_innovation.silver_slab" : "Silver Slab",
+  "block.silver_innovation.silver_button" : "Silver Button",
+  "block.silver_innovation.silver_pressure_plate" : "Silver Pressure Plate",
+  "block.silver_innovation.silver_fence" : "Silver Fence",
+  "block.silver_innovation.silver_fence_gate" : "Silver Fence Gate",
+  "block.silver_innovation.silver_wall" : "Silver Wall",
+  "block.silver_innovation.silver_door" : "Silver Door",
+  "block.silver_innovation.silver_trapdoor" : "Silver Trapdoor",
+
+  "entity.minecraft.villager.silver_innovation.silver_smither" : "Silver Smither",
+  "entity.silver_innovation.silver_golem" : "Silver Golem",
+  "entity.silver_innovation.silver_missle" : "Silver Missle",
+
+  "sounds.silver_innovation.silver_bow" : "Silver Bow",
+
+  "effect.silver_innovation.freeze" : "Freeze"
+}

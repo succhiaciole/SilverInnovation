@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carbon_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "silver_innovation:carbon_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "silver_innovation:carbon_dust_from_smelting_carbon_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_carbon_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "silver_innovation:carbon_dust_from_smelting_carbon_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

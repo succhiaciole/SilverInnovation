@@ -1,0 +1,6 @@
+{
+  "parent": "silver_innovation:item/silver_longbow",
+  "textures": {
+    "layer0": "silver_innovation:item/silver_longbow_pulling_0"
+  }
+}

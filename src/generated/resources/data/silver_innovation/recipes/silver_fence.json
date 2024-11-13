@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "silver_innovation:silver_ingot"
+    },
+    "S": {
+      "item": "silver_innovation:silver_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SAS",
+    "SAS"
+  ],
+  "result": {
+    "count": 6,
+    "item": "silver_innovation:silver_fence"
+  },
+  "show_notification": true
+}

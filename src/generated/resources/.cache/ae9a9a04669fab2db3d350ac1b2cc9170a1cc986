@@ -1,0 +1,13 @@
+// 1.20.1	2024-10-16T19:20:38.5732832	Tags for minecraft:block mod id silver_innovation
+a13c8eb36de5553fa2073fba7a2f525c4b1ee027 data/minecraft/tags/blocks/buttons.json
+68a6c4459112511f5709486233937e0e68eddd5d data/minecraft/tags/blocks/fences.json
+a72b4e9c2f45f277ba13efd722f1108f4456daaa data/minecraft/tags/blocks/fence_gates.json
+9524ef0f37644c308c65c764d2402cb6949e7372 data/minecraft/tags/blocks/mineable/pickaxe.json
+ee6c54faea3d9e4fff31be26b7e39b0cb9279d21 data/minecraft/tags/blocks/mineable/shovel.json
+165261c691135a26dbcb543ce7c071df75881b51 data/minecraft/tags/blocks/needs_diamond_tool.json
+317475200ac67ba079f459f292c4f1ff0cd2729e data/minecraft/tags/blocks/needs_iron_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_stone_tool.json
+2618bc03b065fa5b7752320b2ccf563b676074e0 data/minecraft/tags/blocks/pressure_plates.json
+5d5ddcd4f33d0eccbbd0b67ff91dbda3f62e8853 data/minecraft/tags/blocks/walls.json
+c79998e53a789a3fc1f480afc67397f8490343a3 data/silver_innovation/tags/blocks/metal_detector_valuables.json
+479511073c8aa0010251a71bf7dac39174b8a332 data/silver_innovation/tags/blocks/needs_silver_tool.json

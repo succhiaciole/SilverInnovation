@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_ingot"
+    },
+    "A": {
+      "item": "silver_innovation:carbon_dust"
+    },
+    "X": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " #X",
+    "# A",
+    " #X"
+  ],
+  "result": {
+    "item": "silver_innovation:silver_bow"
+  },
+  "show_notification": true
+}

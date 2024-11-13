@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "silver_innovation:silver_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "item": "silver_innovation:silver_pressure_plate"
+  },
+  "show_notification": true
+}

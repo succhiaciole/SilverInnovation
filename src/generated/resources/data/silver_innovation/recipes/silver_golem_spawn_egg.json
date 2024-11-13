@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "silver_innovation:silver_block"
+    },
+    "T": {
+      "item": "minecraft:carved_pumpkin"
+    }
+  },
+  "pattern": [
+    " T ",
+    "AAA",
+    " A "
+  ],
+  "result": {
+    "item": "silver_innovation:silver_golem_spawn_egg"
+  },
+  "show_notification": true
+}
