@@ -2,16 +2,24 @@ package net.coder.silver_innovation.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.coder.silver_innovation.SilverInnovation;
+import net.coder.silver_innovation.entity.projectile.ThrownSilverPorter;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.villager.ModVillagers;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.event.entity.EntityTeleportEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.jetbrains.annotations.ApiStatus;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -93,6 +101,51 @@ public class ModEvents {
                         10, 1, 1f));
 
             }
+    }
+
+    @Cancelable
+    public static class SilverPorter extends EntityTeleportEvent
+    {
+        private final ServerPlayer player;
+        private final ThrownSilverPorter silverPorterEntity;
+        private float attackDamage;
+        private final HitResult hitResult;
+
+        @ApiStatus.Internal
+        public SilverPorter(ServerPlayer entity, double targetX, double targetY, double targetZ, ThrownSilverPorter silverPorterEntity, float attackDamage, HitResult hitResult)
+        {
+            super(entity, targetX, targetY, targetZ);
+            this.silverPorterEntity = silverPorterEntity;
+            this.player = entity;
+            this.attackDamage = attackDamage;
+            this.hitResult = hitResult;
+        }
+
+        public ThrownSilverPorter getSilverPorterEntity()
+        {
+            return silverPorterEntity;
+        }
+
+        public ServerPlayer getPlayer()
+        {
+            return player;
+        }
+
+        @Nullable
+        public HitResult getHitResult()
+        {
+            return this.hitResult;
+        }
+
+        public float getAttackDamage()
+        {
+            return attackDamage;
+        }
+
+        public void setAttackDamage(float attackDamage)
+        {
+            this.attackDamage = attackDamage;
+        }
     }
 }
 

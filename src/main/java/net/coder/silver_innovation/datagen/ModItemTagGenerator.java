@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,5 +25,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                     ModItems.SILVER_CHESTPLATE.get(),
                     ModItems.SILVER_LEGGINGS.get(),
                     ModItems.SILVER_BOOTS.get());
+        this.tag(Tags.Items.ENDER_PEARLS)
+                .add(ModItems.SILVER_PORTER.get());
     }
 }

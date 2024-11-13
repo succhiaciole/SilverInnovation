@@ -8,6 +8,7 @@ import net.coder.silver_innovation.entity.client.renderer.SilverGolemRenderer;
 import net.coder.silver_innovation.item.ModCreativeModeTabs;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.loot.ModLootModifiers;
+import net.coder.silver_innovation.potion.ModPotions;
 import net.coder.silver_innovation.sound.ModSounds;
 import net.coder.silver_innovation.util.ModItemProperties;
 import net.coder.silver_innovation.villager.ModVillagers;
@@ -38,7 +39,9 @@ public class SilverInnovation {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
