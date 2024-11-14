@@ -25,7 +25,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                     ModItems.SILVER_CHESTPLATE.get(),
                     ModItems.SILVER_LEGGINGS.get(),
                     ModItems.SILVER_BOOTS.get());
-        this.tag(Tags.Items.ENDER_PEARLS)
-                .add(ModItems.SILVER_PORTER.get());
+        this.tag(Tags.Items.TOOLS_BOWS)
+                .add(ModItems.SILVER_BOW.get(),
+                     ModItems.SILVER_LONGBOW.get(),
+                     ModItems.SILVER_SHORTBOW.get());
     }
 }

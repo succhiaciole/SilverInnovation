@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_INGOT.get());
                         pOutput.accept(ModItems.RAW_SILVER.get());
                         pOutput.accept(ModItems.SILVER_NUGGET.get());
+                        pOutput.accept(ModItems.SILVER_STICK.get());
 
                         pOutput.accept(ModItems.SILVER_HELMET.get());
                         pOutput.accept(ModItems.SILVER_CHESTPLATE.get());
@@ -55,6 +56,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_HOE.get());
                         pOutput.accept(ModItems.SILVER_BOW.get());
                         pOutput.accept(ModItems.SILVER_LONGBOW.get());
+                        pOutput.accept(ModItems.SILVER_SHORTBOW.get());
 
                         pOutput.accept(ModItems.SILVER_GOLEM_SPAWN_EGG.get());
 

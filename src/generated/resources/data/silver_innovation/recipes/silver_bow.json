@@ -3,19 +3,19 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "silver_innovation:silver_ingot"
+      "item": "silver_innovation:silver_stick"
     },
     "A": {
-      "item": "silver_innovation:carbon_dust"
-    },
-    "X": {
       "item": "minecraft:string"
+    },
+    "Z": {
+      "item": "silver_innovation:carbon_dust"
     }
   },
   "pattern": [
-    " #X",
-    "# A",
-    " #X"
+    " #A",
+    "# Z",
+    " #A"
   ],
   "result": {
     "item": "silver_innovation:silver_bow"

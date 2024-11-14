@@ -4,12 +4,18 @@ import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.ModBlocks;
 import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.item.custom.*;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Objects;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -21,6 +27,8 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_STICK = ITEMS.register("silver_stick",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CARBON_DUST = ITEMS.register("carbon_dust",
@@ -41,6 +49,8 @@ public class ModItems {
             () -> new SilverBowItem(new Item.Properties().durability(376).fireResistant()));
     public static final RegistryObject<Item> SILVER_LONGBOW = ITEMS.register("silver_longbow",
             () -> new SilverLongbowItem(new Item.Properties().durability(586).fireResistant()));
+    public static final RegistryObject<Item> SILVER_SHORTBOW = ITEMS.register("silver_shortbow",
+            () -> new SilverShortbowItem(new Item.Properties().durability(298).fireResistant()));
     public static final RegistryObject<Item> SILVER_MISSLE = ITEMS.register("silver_missle",
             () -> new SilverMissleItem(1.7f, new Item.Properties()));
 
@@ -66,7 +76,6 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -46,7 +46,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.SILVER_STRAWBERRY);
-        simpleItem(ModItems.SILVER_PORTER);
 
         simpleItem(ModItems.CARBON_DUST);
         simpleItem(ModItems.ANTHRACITE);
@@ -54,6 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SILVER_INGOT);
         simpleItem(ModItems.RAW_SILVER);
         simpleItem(ModItems.SILVER_NUGGET);
+        simpleItem(ModItems.SILVER_STICK);
 
         handheldItem(ModItems.SILVER_SWORD);
         handheldItem(ModItems.SILVER_PICKAXE);
