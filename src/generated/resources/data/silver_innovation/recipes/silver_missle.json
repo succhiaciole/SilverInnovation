@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_ingot"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#A#",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "item": "silver_innovation:silver_missle"
+  },
+  "show_notification": true
+}

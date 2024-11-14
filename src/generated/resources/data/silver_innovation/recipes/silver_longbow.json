@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_stick"
+    },
+    "A": {
+      "item": "minecraft:string"
+    },
+    "Z": {
+      "item": "silver_innovation:carbon_dust"
+    }
+  },
+  "pattern": [
+    "#AA",
+    "# Z",
+    "#AA"
+  ],
+  "result": {
+    "item": "silver_innovation:silver_longbow"
+  },
+  "show_notification": true
+}

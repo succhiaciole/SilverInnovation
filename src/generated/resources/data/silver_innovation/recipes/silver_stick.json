@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "silver_innovation:silver_stick"
+  },
+  "show_notification": true
+}
