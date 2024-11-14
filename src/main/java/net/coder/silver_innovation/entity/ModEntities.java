@@ -3,7 +3,6 @@ package net.coder.silver_innovation.entity;
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.entity.projectile.SilverMissleEntity;
 import net.coder.silver_innovation.entity.custom.SilverGolemEntity;
-import net.coder.silver_innovation.entity.projectile.ThrownSilverPorter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -25,12 +24,6 @@ public class ModEntities {
                     .clientTrackingRange(4)
                     .updateInterval(20)
                     .build(new ResourceLocation(SilverInnovation.MOD_ID, "silver_missle").toString()));
-    public static final RegistryObject<EntityType<ThrownSilverPorter>> SILVER_PORTER =
-            ENTITY_TYPES.register("silver_porter", () -> EntityType.Builder.<ThrownSilverPorter>of(ThrownSilverPorter::new, MobCategory.MISC)
-                    .sized(0.25F, 0.25F)
-                    .clientTrackingRange(4)
-                    .updateInterval(10)
-                    .build(new ResourceLocation(SilverInnovation.MOD_ID, "silver_porter").toString()));
 
 
 
