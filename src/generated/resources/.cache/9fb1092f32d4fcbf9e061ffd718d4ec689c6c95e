@@ -1,4 +1,4 @@
-// 1.20.1	2024-11-14T15:47:46.3327122	Recipes
+// 1.20.1	2024-11-14T15:56:53.750891	Recipes
 e3f5f6bb8b3a06862997f158a7d55d1472b1d882 data/silver_innovation/advancements/recipes/misc/anthracite_from_smelting_carbon_dust.json
 8c004272f22dc3d779d5d878c04b08846c1cd4c1 data/silver_innovation/advancements/recipes/misc/carbon_dust.json
 28d8c50143210d77f889566664ad93d9f2a2003a data/silver_innovation/advancements/recipes/misc/carbon_dust_block.json
@@ -72,7 +72,7 @@ c2c9add12e341dd4d7e2e76d6970793d2a03fda8 data/silver_innovation/recipes/silver_p
 7b08cb97e38429e5055ad3372a58fa1881e83d87 data/silver_innovation/recipes/silver_shovel.json
 e2ffd872fc39e7ca35360778d29823876bc9bef6 data/silver_innovation/recipes/silver_slab.json
 ce662944c5f3c811fe46f03111b551fff8001c1b data/silver_innovation/recipes/silver_stairs.json
-30744a5ab280fe4c14689b156e75aed791216e0b data/silver_innovation/recipes/silver_stick.json
+e3eb2a1eefb815a3592846eec8d939c9c99e2b64 data/silver_innovation/recipes/silver_stick.json
 34fbff1a5a65221769d56a4e0d29afd02ce4c133 data/silver_innovation/recipes/silver_strawberry.json
 059a744458c5339cf65a02c14dfbbdfd21a9b396 data/silver_innovation/recipes/silver_sword.json
 d26c65543819183f2aa277d6c3b024b5ca6797ec data/silver_innovation/recipes/silver_trapdoor.json

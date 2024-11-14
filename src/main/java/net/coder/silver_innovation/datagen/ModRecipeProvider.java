@@ -206,7 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_STICK.get(), 4)
                 .pattern("   ")
                 .pattern(" # ")
                 .pattern(" # ")
