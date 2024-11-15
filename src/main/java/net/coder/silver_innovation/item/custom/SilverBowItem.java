@@ -1,5 +1,6 @@
 package net.coder.silver_innovation.item.custom;
 
+import net.coder.silver_innovation.enchantment.ModEnchantments;
 import net.coder.silver_innovation.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fml.common.Mod;
 
 public class SilverBowItem extends BowItem {
     public static final int DEFAULT_RANGE = 20;
@@ -72,6 +74,10 @@ public class SilverBowItem extends BowItem {
 
                             if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, pStack) > 0) {
                                 abstractarrow.setSecondsOnFire(100);
+                            }
+
+                            if (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.FACTOR.get(), pStack) > 0) {
+                                abstractarrow.setCritArrow(true);
                             }
 
                             pStack.hurtAndBreak(1, player, (p_289501_) -> {

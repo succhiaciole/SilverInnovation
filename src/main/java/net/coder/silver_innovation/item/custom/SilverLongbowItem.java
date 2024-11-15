@@ -1,5 +1,6 @@
 package net.coder.silver_innovation.item.custom;
 
+import net.coder.silver_innovation.enchantment.ModEnchantments;
 import net.coder.silver_innovation.sound.ModSounds;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -71,6 +72,10 @@ public class SilverLongbowItem extends BowItem {
 
                         if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, pStack) > 0) {
                             abstractarrow.setSecondsOnFire(100);
+                        }
+
+                        if (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.FACTOR.get(), pStack) > 0) {
+                            abstractarrow.setCritArrow(true);
                         }
 
                         pStack.hurtAndBreak(1, player, (p_289501_) -> {

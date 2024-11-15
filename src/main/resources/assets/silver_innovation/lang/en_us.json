@@ -5,7 +5,6 @@
   "item.silver_innovation.carbon_dust" : "Carbon Dust",
   "item.silver_innovation.silver_limb" : "Silver Limb",
 
-  "item.silver_innovation.red_test" : "RED TEST",
   "item.silver_innovation.silver_golem_spawn_egg" : "Silver Golem Spawn Egg",
   "item.silver_innovation.silver_bow" : "Silver Bow",
   "item.silver_innovation.silver_longbow" : "Silver Longbow",
@@ -35,10 +34,10 @@
   "item.silver_innovation.anthracite" : "Anthracite",
 
   "item.silver_innovation.metal_detector" : "Metal Detector",
-  "item.silver_innovation.arnold_sword" : "Arnold Sword",
+
+  "enchantment.silver_innovation.factor" : "Factor",
 
   "creativetab.silver_innovation" : "Silver Innovation",
-  "creativetab.tests" : "Tests",
 
   "block.silver_innovation.silver_block" : "Block Of Silver",
   "block.silver_innovation.raw_silver_block" : "Block Of Raw Silver",

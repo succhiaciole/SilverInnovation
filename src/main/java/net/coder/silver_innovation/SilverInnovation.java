@@ -3,6 +3,7 @@ package net.coder.silver_innovation;
 import com.mojang.logging.LogUtils;
 import net.coder.silver_innovation.block.ModBlocks;
 import net.coder.silver_innovation.effect.ModEffects;
+import net.coder.silver_innovation.enchantment.ModEnchantments;
 import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.entity.client.renderer.SilverGolemRenderer;
 import net.coder.silver_innovation.item.ModCreativeModeTabs;
@@ -39,6 +40,7 @@ public class SilverInnovation {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
