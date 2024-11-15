@@ -1,5 +1,5 @@
-// 1.20.1	2024-10-19T18:35:07.731831	Global Loot Modifiers : silver_innovation
-bbace8571c4f1b49eced3e52781b36f4102595e3 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.1	2024-11-15T16:08:51.7880477	Global Loot Modifiers : silver_innovation
+d1b758199bb1c1ea4964cebc862f1c0dd9391b48 data/forge/loot_modifiers/global_loot_modifiers.json
 a9e3ba12b3d7ff46e15b70b66cb7ac11d767f6c6 data/silver_innovation/loot_modifiers/silver_ingot_from_buried_treasure.json
-6ee9ef6d6a3601e7a9e2e10700658bbbbeac2d7e data/silver_innovation/loot_modifiers/silver_nugget_from_iron_golem.json
+be9ab33e91f67ea2c3d91658fa9cd3db0f3f6089 data/silver_innovation/loot_modifiers/silver_nugget_from_silver_golem.json
 f2c72b361e70c3a397af6333aa7aa967525ff5a7 data/silver_innovation/loot_modifiers/strawberry_seed_from_grass.json

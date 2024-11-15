@@ -6,6 +6,7 @@ import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.item.custom.*;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,7 +29,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_STICK = ITEMS.register("silver_stick",
+    public static final RegistryObject<Item> SILVER_LIMB = ITEMS.register("silver_limb",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CARBON_DUST = ITEMS.register("carbon_dust",

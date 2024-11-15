@@ -32,7 +32,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_INGOT.get());
                         pOutput.accept(ModItems.RAW_SILVER.get());
                         pOutput.accept(ModItems.SILVER_NUGGET.get());
-                        pOutput.accept(ModItems.SILVER_STICK.get());
+                        pOutput.accept(ModItems.SILVER_LIMB.get());
 
                         pOutput.accept(ModItems.SILVER_HELMET.get());
                         pOutput.accept(ModItems.SILVER_CHESTPLATE.get());

@@ -53,7 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SILVER_INGOT);
         simpleItem(ModItems.RAW_SILVER);
         simpleItem(ModItems.SILVER_NUGGET);
-        simpleItem(ModItems.SILVER_STICK);
+        simpleItem(ModItems.SILVER_LIMB);
 
         handheldItem(ModItems.SILVER_SWORD);
         handheldItem(ModItems.SILVER_PICKAXE);

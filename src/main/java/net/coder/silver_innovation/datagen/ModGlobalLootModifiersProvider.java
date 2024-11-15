@@ -23,8 +23,8 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.05f).build()}, ModItems.STRAWBERRY_SEEDS.get()));
 
-        add("silver_nugget_from_iron_golem", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("entities/iron_golem")).build() }, ModItems.SILVER_NUGGET.get()));
+        add("silver_nugget_from_silver_golem", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("entities/silver_golem")).build() }, ModItems.SILVER_NUGGET.get()));
 
         add("silver_ingot_from_buried_treasure", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/buried_treasure")).build(),

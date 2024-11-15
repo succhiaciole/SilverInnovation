@@ -206,7 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_STICK.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_LIMB.get(), 4)
                 .pattern("   ")
                 .pattern(" # ")
                 .pattern(" # ")
@@ -218,19 +218,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" #A")
                 .pattern("# Z")
                 .pattern(" #A")
-                .define('#', ModItems.SILVER_STICK.get())
+                .define('#', ModItems.SILVER_LIMB.get())
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_LONGBOW.get())
-                .pattern("#AA")
-                .pattern("# Z")
-                .pattern("#AA")
-                .define('#', ModItems.SILVER_STICK.get())
+                .pattern(" #A")
+                .pattern("#HZ")
+                .pattern(" #A")
+                .define('#', ModItems.SILVER_LIMB.get())
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
+                .define('H', ModItems.SILVER_BOW.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
@@ -238,7 +239,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" A ")
                 .pattern("#XZ")
                 .pattern(" A ")
-                .define('#', ModItems.SILVER_STICK.get())
+                .define('#', ModItems.SILVER_LIMB.get())
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
                 .define('X', ModItems.SILVER_BOW.get())
