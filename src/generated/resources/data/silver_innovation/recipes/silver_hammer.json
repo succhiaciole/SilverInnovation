@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_ingot"
+    },
+    "A": {
+      "item": "silver_innovation:silver_limb"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " A "
+  ],
+  "result": {
+    "item": "silver_innovation:silver_hammer"
+  },
+  "show_notification": true
+}
