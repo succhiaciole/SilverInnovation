@@ -54,6 +54,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_AXE.get());
                         pOutput.accept(ModItems.SILVER_SHOVEL.get());
                         pOutput.accept(ModItems.SILVER_HOE.get());
+                        pOutput.accept(ModItems.SILVER_HAMMER.get());
                         pOutput.accept(ModItems.SILVER_BOW.get());
                         pOutput.accept(ModItems.SILVER_LONGBOW.get());
                         pOutput.accept(ModItems.SILVER_SHORTBOW.get());

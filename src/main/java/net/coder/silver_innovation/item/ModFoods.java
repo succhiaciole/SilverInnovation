@@ -9,7 +9,6 @@ public class ModFoods {
            .saturationMod(0.2f)
            .nutrition(2)
            .fast()
-           .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200), 0.1f)
            .build();
 
    public static final FoodProperties SILVER_STRAWBERRY = new FoodProperties.Builder()

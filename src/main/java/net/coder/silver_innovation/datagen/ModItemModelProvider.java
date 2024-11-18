@@ -60,6 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SILVER_AXE);
         handheldItem(ModItems.SILVER_SHOVEL);
         handheldItem(ModItems.SILVER_HOE);
+        handheldItem(ModItems.SILVER_HAMMER);
 
         trimmedArmorItem(ModItems.SILVER_HELMET);
         trimmedArmorItem(ModItems.SILVER_CHESTPLATE);

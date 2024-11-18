@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier SILVER = TierSortingRegistry.registerTier(
-            new ForgeTier(2, 376, 6.0f, 2.0f, 15,
+            new ForgeTier(2, 574, 6.0f, 2.0f, 15,
                     ModTags.Blocks.NEEDS_SILVER_TOOL, () -> Ingredient.of(ModItems.SILVER_INGOT.get())),
             new ResourceLocation(SilverInnovation.MOD_ID, "silver"), List.of(Tiers.STONE), List.of(Tiers.DIAMOND));
 

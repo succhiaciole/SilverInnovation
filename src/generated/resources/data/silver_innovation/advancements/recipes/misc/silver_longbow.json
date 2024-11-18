@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_silver_ingot": {
+    "has_silver_bow": {
       "conditions": {
         "items": [
           {
             "items": [
-              "silver_innovation:silver_ingot"
+              "silver_innovation:silver_bow"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_silver_ingot",
+      "has_silver_bow",
       "has_the_recipe"
     ]
   ],

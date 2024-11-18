@@ -4,19 +4,12 @@ import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.ModBlocks;
 import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.item.custom.*;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.Objects;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -68,6 +61,8 @@ public class ModItems {
             () -> new AxeItem(ModToolTiers.SILVER,6,-3.5f, new Item.Properties()));
     public static final RegistryObject<Item> SILVER_HOE = ITEMS.register("silver_hoe",
             () -> new HoeItem(ModToolTiers.SILVER,0,-1.4f, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_HAMMER = ITEMS.register("silver_hammer",
+            () -> new HammerItem(ModToolTiers.SILVER, 3,-2.9f, new Item.Properties().durability(879)));
 
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new ModArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -77,6 +72,7 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

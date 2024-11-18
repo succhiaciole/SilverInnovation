@@ -1,4 +1,4 @@
-// 1.20.1	2024-11-15T16:08:51.7945819	Item Models: silver_innovation
+// 1.20.1	2024-11-16T13:00:12.0236445	Item Models: silver_innovation
 5f943a9fcf744e57b697cc38b332a56d08b25ba5 assets/silver_innovation/models/item/anthracite.json
 5802f4eab294ccb7cca068a247d80aa5727a9f17 assets/silver_innovation/models/item/carbon_dust.json
 ccb365fc58bfff672386024a59ed90ff8b498fb5 assets/silver_innovation/models/item/metal_detector.json
@@ -31,6 +31,7 @@ f2d38568cb0f8096f80dac964bac0ee5189b1397 assets/silver_innovation/models/item/si
 dcd2fff8ace034f326dfd6e87b77d7f191e8e673 assets/silver_innovation/models/item/silver_fence.json
 ee5e2cdeb712be4d5b767b239fe3c1089884bc03 assets/silver_innovation/models/item/silver_fence_gate.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/silver_innovation/models/item/silver_golem_spawn_egg.json
+b5070b76ad7eba71254931a1987b17b368918ae1 assets/silver_innovation/models/item/silver_hammer.json
 268453bb0729c292401681f7fb090efa7ad2aca7 assets/silver_innovation/models/item/silver_helmet.json
 c006a8cec931cb1908903404caf5e16b2dcbd9e6 assets/silver_innovation/models/item/silver_helmet_amethyst_trim.json
 535d3e8634eee4e746af7e553838c64a83464eb0 assets/silver_innovation/models/item/silver_helmet_copper_trim.json

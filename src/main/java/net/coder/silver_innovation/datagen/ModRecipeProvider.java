@@ -41,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, TO_ANTHRACITE, RecipeCategory.MISC, ModItems.ANTHRACITE.get(), 0.75f, 500, "anthracite");
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_SLAB.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_SLAB.get(),6)
                 .pattern("   ")
                 .pattern("SSS")
                 .pattern("   ")
@@ -49,7 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_WALL.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_WALL.get(),6)
                 .pattern("   ")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -57,7 +57,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_DOOR.get(),3)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_DOOR.get(),3)
                 .pattern(" SS")
                 .pattern(" SS")
                 .pattern(" SS")
@@ -65,7 +65,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_TRAPDOOR.get(),2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_TRAPDOOR.get(),2)
                 .pattern("   ")
                 .pattern("SS ")
                 .pattern("SS ")
@@ -74,25 +74,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_FENCE.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_FENCE.get(), 6)
                 .pattern("   ")
                 .pattern("SAS")
                 .pattern("SAS")
                 .define('S', ModBlocks.SILVER_BLOCK.get())
-                .define('A', ModItems.SILVER_INGOT.get())
+                .define('A', ModItems.SILVER_LIMB.get())
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_FENCE_GATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_FENCE_GATE.get(), 2)
                 .pattern("   ")
                 .pattern("ASA")
                 .pattern("ASA")
                 .define('S', ModBlocks.SILVER_BLOCK.get())
-                .define('A', ModItems.SILVER_INGOT.get())
+                .define('A', ModItems.SILVER_LIMB.get())
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_STAIRS.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_STAIRS.get(), 6)
                 .pattern("S  ")
                 .pattern("SS ")
                 .pattern("SSS")
@@ -100,7 +100,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_PRESSURE_PLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_PRESSURE_PLATE.get(), 2)
                 .pattern("   ")
                 .pattern("SS ")
                 .pattern("   ")
@@ -108,7 +108,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -116,7 +116,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CARBON_DUST_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARBON_DUST_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -124,7 +124,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CARBON_DUST.get()), has(ModItems.CARBON_DUST.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_SILVER_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_SILVER_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -132,7 +132,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.RAW_SILVER.get()), has(ModItems.RAW_SILVER.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_STRAWBERRY.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.SILVER_STRAWBERRY.get())
                 .pattern("SSS")
                 .pattern("SAS")
                 .pattern("SSS")
@@ -142,7 +142,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.METAL_DETECTOR.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METAL_DETECTOR.get())
                 .pattern("  T")
                 .pattern(" S ")
                 .pattern("SA ")
@@ -152,47 +152,47 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_SWORD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_SWORD.get())
                 .pattern(" T ")
                 .pattern(" T ")
                 .pattern(" A ")
-                .define('A', Items.STICK)
+                .define('A', ModItems.SILVER_LIMB.get())
                 .define('T', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_PICKAXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_PICKAXE.get())
                 .pattern("TTT")
                 .pattern(" A ")
                 .pattern(" A ")
-                .define('A', Items.STICK)
+                .define('A', ModItems.SILVER_LIMB.get())
                 .define('T', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_AXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_AXE.get())
                 .pattern("TT ")
                 .pattern("TA ")
                 .pattern(" A ")
-                .define('A', Items.STICK)
+                .define('A', ModItems.SILVER_LIMB.get())
                 .define('T', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_SHOVEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_SHOVEL.get())
                 .pattern(" T ")
                 .pattern(" A ")
                 .pattern(" A ")
-                .define('A', Items.STICK)
+                .define('A', ModItems.SILVER_LIMB.get())
                 .define('T', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_HOE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_HOE.get())
                 .pattern("TT ")
                 .pattern(" A ")
                 .pattern(" A ")
-                .define('A', Items.STICK)
+                .define('A', ModItems.SILVER_LIMB.get())
                 .define('T', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
@@ -206,7 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_LIMB.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_LIMB.get(), 2)
                 .pattern("   ")
                 .pattern(" # ")
                 .pattern(" # ")
@@ -214,17 +214,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_BOW.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_BOW.get())
                 .pattern(" #A")
                 .pattern("# Z")
                 .pattern(" #A")
                 .define('#', ModItems.SILVER_LIMB.get())
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
-                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.SILVER_LIMB.get()), has(ModItems.SILVER_LIMB.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_LONGBOW.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_LONGBOW.get())
                 .pattern(" #A")
                 .pattern("#HZ")
                 .pattern(" #A")
@@ -232,10 +232,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
                 .define('H', ModItems.SILVER_BOW.get())
-                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.SILVER_BOW.get()), has(ModItems.SILVER_BOW.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_SHORTBOW.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_SHORTBOW.get())
                 .pattern(" A ")
                 .pattern("#XZ")
                 .pattern(" A ")
@@ -243,7 +243,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.STRING)
                 .define('Z', ModItems.CARBON_DUST.get())
                 .define('X', ModItems.SILVER_BOW.get())
-                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.SILVER_BOW.get()), has(ModItems.SILVER_BOW.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_MISSLE.get(), 2)
@@ -255,7 +255,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.SILVER_BUTTON.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_HAMMER.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern(" A ")
+                .define('#', ModItems.SILVER_INGOT.get())
+                .define('A', ModItems.SILVER_LIMB.get())
+                .unlockedBy(getHasName(ModItems.SILVER_PICKAXE.get()), has(ModItems.SILVER_PICKAXE.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.SILVER_BUTTON.get())
                 .requires(ModBlocks.SILVER_BLOCK.get())
                 .requires(Items.REDSTONE)
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get()))
