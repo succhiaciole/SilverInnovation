@@ -60,6 +60,7 @@ public class ModEvents {
                     10, 1, 0.02f));
 
         }
+
             if (event.getType() == ModVillagers.SILVER_SMITHER.get()) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
@@ -84,6 +85,11 @@ public class ModEvents {
                         10, 1, 0.35f));
 
                 trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 5),
+                        new ItemStack(ModItems.SILVER_LIMB.get(), 4),
+                        8, 1, 0.5f));
+
+                trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 2),
                         new ItemStack(ModItems.SILVER_HOE.get(), 1),
                         10, 1, 0.35f));
@@ -98,6 +104,11 @@ public class ModEvents {
                         new ItemStack(ModItems.ANTHRACITE.get(), 3),
                         10, 1, 0.5f));
 
+                trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 5),
+                        new ItemStack(ModItems.SILVER_BOW.get(), 1),
+                        5, 1, 0.45f));
+
                 trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 5),
                         new ItemStack(ModItems.SILVER_HELMET.get(), 1),
@@ -107,6 +118,11 @@ public class ModEvents {
                         new ItemStack(Items.EMERALD, 4),
                         new ItemStack(ModItems.SILVER_BOOTS.get(), 1),
                         10, 1, 0.75f));
+
+                trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 7),
+                        new ItemStack(ModItems.SILVER_MISSLE.get(), 4),
+                        8, 1, 0.75f));
 
                 trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 5),
@@ -122,6 +138,21 @@ public class ModEvents {
                         new ItemStack(Items.EMERALD, 16),
                         new ItemStack(ModItems.STRAWBERRY_SEEDS.get(), 16),
                         10, 1, 1f));
+
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 8),
+                        new ItemStack(ModItems.SILVER_LONGBOW.get(), 1),
+                        5, 1, 1f));
+
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 5),
+                        new ItemStack(ModItems.SILVER_SHORTBOW.get(), 1),
+                        5, 1, 1f));
+
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 25),
+                        new ItemStack(ModItems.SILVER_GOLEM_SPAWN_EGG.get(), 2),
+                        3, 1, 5f));
 
             }
     }

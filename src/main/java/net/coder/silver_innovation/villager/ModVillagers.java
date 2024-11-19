@@ -18,7 +18,7 @@ public class ModVillagers {
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, SilverInnovation.MOD_ID);
 
     public static final RegistryObject<PoiType> SILVER_POI = POI_TYPES.register("silver_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SILVERER_TABLE.get().getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SILVER_FOUNDRY.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> SILVER_SMITHER =

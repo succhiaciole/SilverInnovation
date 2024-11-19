@@ -1,6 +1,7 @@
 package net.coder.silver_innovation.block;
 
 import net.coder.silver_innovation.SilverInnovation;
+import net.coder.silver_innovation.block.custom.SilverFoundryBlock;
 import net.coder.silver_innovation.block.custom.StrawberryCropBlock;
 import net.coder.silver_innovation.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -35,8 +36,8 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE), UniformInt.of(2,5)));
     public static final RegistryObject<Block> CARBON_DUST_BLOCK = registerBlock("carbon_dust_block",
             () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
-    public static final RegistryObject<Block> SILVERER_TABLE = registerBlock("silverer_table",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMITHING_TABLE)));
+    public static final RegistryObject<Block> SILVER_FOUNDRY = registerBlock("silver_foundry",
+            () -> new SilverFoundryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = registerBlock("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

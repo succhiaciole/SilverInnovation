@@ -68,7 +68,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_CARBON_ORE.get());
                         pOutput.accept(ModBlocks.CARBON_ORE.get());
                         pOutput.accept(ModBlocks.CARBON_DUST_BLOCK.get());
-                        pOutput.accept(ModBlocks.SILVERER_TABLE.get());
+                        pOutput.accept(ModBlocks.SILVER_FOUNDRY.get());
 
                         pOutput.accept(ModBlocks.SILVER_DOOR.get());
                         pOutput.accept(ModBlocks.SILVER_TRAPDOOR.get());

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "silver_innovation:block/silver_foundry_front",
+    "side": "silver_innovation:block/silver_foundry_side",
+    "top": "silver_innovation:block/silver_foundry_top",
+    "bottom": "silver_innovation:block/silver_foundry_bottom"
+  }
+}
