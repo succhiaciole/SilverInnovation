@@ -11,6 +11,7 @@ import net.coder.silver_innovation.item.ModCreativeModeTabs;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.loot.ModLootModifiers;
 import net.coder.silver_innovation.potion.ModPotions;
+import net.coder.silver_innovation.recipe.ModRecipes;
 import net.coder.silver_innovation.screen.ModMenuTypes;
 import net.coder.silver_innovation.screen.SilverFoundryScreen;
 import net.coder.silver_innovation.sound.ModSounds;
@@ -55,6 +56,7 @@ public class SilverInnovation {
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

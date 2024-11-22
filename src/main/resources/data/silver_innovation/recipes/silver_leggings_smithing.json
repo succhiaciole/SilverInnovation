@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "silver_innovation:silver_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_leggings"
+  },
+  "result": {
+    "item": "silver_innovation:silver_leggings"
+  },
+  "template": {
+    "item": "silver_innovation:silver_upgrade_smithing_template"
+  }
+}

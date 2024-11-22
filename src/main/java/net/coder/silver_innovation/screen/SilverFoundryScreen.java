@@ -33,11 +33,25 @@ public class SilverFoundryScreen extends AbstractContainerScreen<SilverFoundryMe
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(guiGraphics, x, y);
+        renderProgressFirstFire(guiGraphics, x, y);
+        renderProgressSecondFire(guiGraphics, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
             guiGraphics.blit(TEXTURE, x + 74, y + 24, 176, 0, 26, menu.getScaledProgress());
+        }
+    }
+
+    private void renderProgressFirstFire(GuiGraphics guiGraphics, int x, int y) {
+        if(menu.isCrafting()) {
+            guiGraphics.blit(TEXTURE, x + 60, y + 34, 176, 29, 14, menu.getScaledFireProgress());
+        }
+    }
+
+    private void renderProgressSecondFire(GuiGraphics guiGraphics, int x, int y) {
+        if(menu.isCrafting()) {
+            guiGraphics.blit(TEXTURE, x + 101, y + 34, 176, 29, 14, menu.getScaledFireSecondProgress());
         }
     }
 

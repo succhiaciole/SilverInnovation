@@ -1,19 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "silver_innovation:silver_foundry",
   "category": "misc",
-  "key": {
-    "#": {
+  "group": "silver",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
       "item": "silver_innovation:silver_ingot"
     }
-  },
-  "pattern": [
-    "   ",
-    " # ",
-    " # "
   ],
   "result": {
     "count": 2,
     "item": "silver_innovation:silver_limb"
-  },
-  "show_notification": true
+  }
 }

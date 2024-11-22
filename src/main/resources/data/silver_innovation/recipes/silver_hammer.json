@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "tools",
   "key": {
-    "#": {
+    "S": {
       "item": "silver_innovation:silver_ingot"
     },
-    "A": {
+    "@": {
       "item": "silver_innovation:silver_limb"
+    },
+    "A": {
+      "item": "silver_innovation:silver_pickaxe"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    " A "
+    "SSS",
+    "SAS",
+    " @ "
   ],
   "result": {
     "item": "silver_innovation:silver_hammer"

@@ -47,10 +47,27 @@ public class SilverFoundryMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the height in pixels of your arrow
+        int progressArrowSize = 27; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
+
+    public int getScaledFireProgress() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);  // Max Progress
+        int progressFirstFireSize = 14; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressFirstFireSize / maxProgress : 0;
+    }
+
+    public int getScaledFireSecondProgress() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);  // Max Progress
+        int progressSecondFireSize = 14; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressSecondFireSize / maxProgress : 0;
+    }
+
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.

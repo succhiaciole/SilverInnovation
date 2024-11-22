@@ -1,0 +1,17 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "group": "silver",
+  "ingredients": [
+    {
+      "item": "silver_innovation:strawberry"
+    },
+    {
+      "item": "silver_innovation:silver_ingot"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "silver_innovation:silver_strawberry"
+  }
+}

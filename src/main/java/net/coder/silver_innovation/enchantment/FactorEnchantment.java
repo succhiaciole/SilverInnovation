@@ -6,6 +6,7 @@ import net.coder.silver_innovation.item.custom.SilverShortbowItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 public class FactorEnchantment extends Enchantment {
         public FactorEnchantment(Enchantment.Rarity pRarity, EquipmentSlot... pApplicableSlots) {
@@ -20,5 +21,8 @@ public class FactorEnchantment extends Enchantment {
         return 50;
     }
 
+    protected boolean checkCompatibility(Enchantment pOther) {
+        return this != Enchantments.INFINITY_ARROWS;
+    }
 }
 

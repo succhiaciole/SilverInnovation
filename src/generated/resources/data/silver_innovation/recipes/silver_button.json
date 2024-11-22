@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "redstone",
   "ingredients": [
     {
       "item": "silver_innovation:silver_block"

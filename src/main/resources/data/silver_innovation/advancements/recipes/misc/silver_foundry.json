@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_silver_pickaxe": {
+    "has_silver_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "silver_innovation:silver_pickaxe"
+              "silver_innovation:silver_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "silver_innovation:silver_hammer"
+        "recipe": "silver_innovation:silver_foundry"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_silver_pickaxe",
+      "has_silver_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "silver_innovation:silver_hammer"
+      "silver_innovation:silver_foundry"
     ]
   },
   "sends_telemetry_event": false

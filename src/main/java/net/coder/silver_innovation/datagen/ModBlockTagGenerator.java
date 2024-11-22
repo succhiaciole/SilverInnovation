@@ -39,7 +39,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     (ModBlocks.SILVER_WALL.get()),
                     (ModBlocks.SILVER_FENCE.get()),
                     (ModBlocks.SILVER_FENCE_GATE.get()),
-                    (ModBlocks.SILVER_DOOR.get()));
+                    (ModBlocks.SILVER_DOOR.get()),
+                    (ModBlocks.SILVER_FOUNDRY.get()));
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SILVER_ORE.get(),
@@ -61,7 +62,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         (ModBlocks.SILVER_FENCE_GATE.get()),
                         (ModBlocks.SILVER_DOOR.get()),
                         (ModBlocks.SILVER_PRESSURE_PLATE.get()),
-                        (ModBlocks.SILVER_BUTTON.get()));
+                        (ModBlocks.SILVER_BUTTON.get()),
+                        (ModBlocks.SILVER_FOUNDRY.get()));
 
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)

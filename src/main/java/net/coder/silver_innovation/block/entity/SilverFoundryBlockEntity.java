@@ -1,6 +1,6 @@
 package net.coder.silver_innovation.block.entity;
 
-import net.coder.silver_innovation.item.ModItems;
+import net.coder.silver_innovation.recipe.SilverFoundryRecipe;
 import net.coder.silver_innovation.screen.SilverFoundryMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,8 +26,11 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+
 
     private static final int INPUT_SLOT_1 = 0;
     private static final int INPUT_SLOT_2 = 1;
@@ -142,7 +145,9 @@ public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.SILVER_INGOT.get(), 1);
+        Optional<SilverFoundryRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getResultItem(null);
+
         this.itemHandler.extractItem(INPUT_SLOT_1, 1, false);
         this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);
 
@@ -159,10 +164,23 @@ public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT_1).getItem() == ModItems.RAW_SILVER.get() && this.itemHandler.getStackInSlot(INPUT_SLOT_2).getItem() == ModItems.SILVER_NUGGET.get();
-        ItemStack result = new ItemStack(ModItems.SILVER_INGOT.get());
+        Optional<SilverFoundryRecipe> recipe = getCurrentRecipe();
 
-        return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+        if (recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack result = recipe.get().getResultItem(null);
+
+        return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+    }
+
+    private Optional<SilverFoundryRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return  this.level.getRecipeManager().getRecipeFor(SilverFoundryRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -174,3 +192,4 @@ public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvide
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
 }
+

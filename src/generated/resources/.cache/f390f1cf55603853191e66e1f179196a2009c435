@@ -1,4 +1,4 @@
-// 1.20.1	2024-11-16T13:00:12.0236445	Item Models: silver_innovation
+// 1.20.1	2024-11-20T16:40:53.1357737	Item Models: silver_innovation
 5f943a9fcf744e57b697cc38b332a56d08b25ba5 assets/silver_innovation/models/item/anthracite.json
 5802f4eab294ccb7cca068a247d80aa5727a9f17 assets/silver_innovation/models/item/carbon_dust.json
 ccb365fc58bfff672386024a59ed90ff8b498fb5 assets/silver_innovation/models/item/metal_detector.json
@@ -66,6 +66,7 @@ c35db19a68383651193a56555e6bcc2e188d807f assets/silver_innovation/models/item/si
 bdd006222f1e6579a7372aba8374c044abcf5a54 assets/silver_innovation/models/item/silver_strawberry.json
 17c095d236daa75118e19db4f263ea1af2169fc5 assets/silver_innovation/models/item/silver_sword.json
 4796b91a14d9883ba5bd841f73f3f10350203e8a assets/silver_innovation/models/item/silver_trapdoor.json
+6652090a9e88f0dfd1f77c9c11e15e448d52b1a7 assets/silver_innovation/models/item/silver_upgrade_smithing_template.json
 cf9ed77e3cbb6e7be61a4d751840848b792696bf assets/silver_innovation/models/item/silver_wall.json
 dada64b2b79084c44440c828e15b8e22313c4c9f assets/silver_innovation/models/item/strawberry.json
 41613da4de93053f1627c2bcc15276bc420fe5a3 assets/silver_innovation/models/item/strawberry_seeds.json

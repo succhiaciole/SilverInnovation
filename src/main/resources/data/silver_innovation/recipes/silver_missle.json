@@ -1,0 +1,16 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "group": "silver",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "silver_innovation:silver_ingot"
+    }
+  ],
+  "result": {
+    "item": "silver_innovation:silver_missle"
+  }
+}

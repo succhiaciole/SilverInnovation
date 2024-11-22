@@ -31,35 +31,34 @@ public class ModEvents {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
-        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
+        if (mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
             BlockPos initialBlockPos = event.getPos();
-            if(HARVESTED_BLOCKS.contains(initialBlockPos)) {
+            if (HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
+                for (BlockPos pos : HammerItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
+                    if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
+                        continue;
+                    }
 
-            for(BlockPos pos : HammerItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
-                if(pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
-                    continue;
+                    HARVESTED_BLOCKS.add(pos);
+                    serverPlayer.gameMode.destroyBlock(pos);
+                    HARVESTED_BLOCKS.remove(pos);
                 }
-
-                HARVESTED_BLOCKS.add(pos);
-                serverPlayer.gameMode.destroyBlock(pos);
-                HARVESTED_BLOCKS.remove(pos);
             }
         }
-    }
 
-    @SubscribeEvent
-    public static void addCustomTrades(VillagerTradesEvent event) {
-        if (event.getType() == VillagerProfession.FARMER) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+        @SubscribeEvent
+        public static void addCustomTrades (VillagerTradesEvent event){
+            if (event.getType() == VillagerProfession.FARMER) {
+                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2),
-                    new ItemStack(ModItems.STRAWBERRY.get(), 6),
-                    10, 1, 0.02f));
+                trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 2),
+                        new ItemStack(ModItems.STRAWBERRY.get(), 6),
+                        10, 1, 0.02f));
 
-        }
+            }
 
             if (event.getType() == ModVillagers.SILVER_SMITHER.get()) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
@@ -154,8 +153,13 @@ public class ModEvents {
                         new ItemStack(ModItems.SILVER_GOLEM_SPAWN_EGG.get(), 2),
                         3, 1, 5f));
 
+                trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 17),
+                        new ItemStack(ModItems.SILVER_HAMMER.get(), 1),
+                        3, 1, 5f));
             }
+        }
     }
-}
+
 
 

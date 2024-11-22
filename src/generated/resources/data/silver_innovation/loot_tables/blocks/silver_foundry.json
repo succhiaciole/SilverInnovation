@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "silver_innovation:silverer_table"
+          "name": "silver_innovation:silver_foundry"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "silver_innovation:blocks/silverer_table"
+  "random_sequence": "silver_innovation:blocks/silver_foundry"
 }

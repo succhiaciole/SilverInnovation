@@ -55,6 +55,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SILVER_NUGGET);
         simpleItem(ModItems.SILVER_LIMB);
 
+        simpleItem(ModItems.SILVER_UPGRADE_SMITHING_TEMPLATE);
+
         handheldItem(ModItems.SILVER_SWORD);
         handheldItem(ModItems.SILVER_PICKAXE);
         handheldItem(ModItems.SILVER_AXE);
