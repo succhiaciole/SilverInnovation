@@ -1,14 +1,22 @@
 package net.coder.silver_innovation.datagen.loot;
 
 import net.coder.silver_innovation.block.ModBlocks;
+import net.coder.silver_innovation.block.custom.StrawberryBushBlock;
 import net.coder.silver_innovation.block.custom.StrawberryCropBlock;
 import net.coder.silver_innovation.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -18,6 +26,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Map;
 import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
@@ -61,7 +70,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
                 ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
 
-    }
+        LootItemCondition.Builder lootitemconditionBbuilder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.STRAWBERRY_BUSH.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryBushBlock.AGE, 4));
+
+        this.add(ModBlocks.STRAWBERRY_BUSH.get(), createBushLikeDrops(ModBlocks.STRAWBERRY_BUSH.get(), ModItems.STRAWBERRY.get(), lootitemconditionBbuilder));
+
+   }
 
     protected LootTable.Builder createIronLikeOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay
@@ -75,6 +90,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                     (pBlock, LootItem.lootTableItem(item)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
                             .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createBushLikeDrops(Block pCropBlock, Item pGrownCropItem, LootItemCondition.Builder pDropGrownCropCondition) {
+        return this.applyExplosionDecay
+                (pCropBlock, LootTable.lootTable().withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(pGrownCropItem).when(pDropGrownCropCondition))));
+
     }
 
 

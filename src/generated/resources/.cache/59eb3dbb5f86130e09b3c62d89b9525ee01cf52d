@@ -1,4 +1,4 @@
-// 1.20.1	2024-11-20T16:40:53.1395444	Loot Tables
+// 1.20.1	2024-11-22T22:17:03.2252439	Loot Tables
 81dbd8bad41abdb342066c860f0833669c01e3c1 data/silver_innovation/loot_tables/blocks/carbon_dust_block.json
 f9134e0157b1286cf82184c14aac90791bf14c96 data/silver_innovation/loot_tables/blocks/carbon_ore.json
 51df60da9afd906be4c25ffb366868cca81926fb data/silver_innovation/loot_tables/blocks/deepslate_carbon_ore.json
@@ -16,4 +16,5 @@ cac42b0de232ba6608c5374e7c69f439121cdca9 data/silver_innovation/loot_tables/bloc
 58f9ad26494e118418f7c1fc91dfe63a1ba1799b data/silver_innovation/loot_tables/blocks/silver_stairs.json
 7f8fa0788e9c7098037dde25dd1a79c681bc13c6 data/silver_innovation/loot_tables/blocks/silver_trapdoor.json
 629ab8ce21d673d2cab8fb85f4ce62cb7063d589 data/silver_innovation/loot_tables/blocks/silver_wall.json
+34174ae449f890a180de5ca16b107b463da11af6 data/silver_innovation/loot_tables/blocks/strawberry_bush.json
 efc39c2b38645da59f74df5edb8c05721d712e84 data/silver_innovation/loot_tables/blocks/strawberry_crop.json

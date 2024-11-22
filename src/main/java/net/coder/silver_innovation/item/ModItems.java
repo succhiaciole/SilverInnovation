@@ -4,7 +4,6 @@ import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.ModBlocks;
 import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.item.custom.*;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,7 +34,7 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(), 3500));
 
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
-            () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_BUSH.get(), new Item.Properties().food(ModFoods.STRAWBERRY)));
     public static final RegistryObject<Item> SILVER_STRAWBERRY = ITEMS.register("silver_strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.SILVER_STRAWBERRY)));
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",

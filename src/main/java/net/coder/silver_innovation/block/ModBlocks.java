@@ -2,6 +2,7 @@ package net.coder.silver_innovation.block;
 
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.custom.SilverFoundryBlock;
+import net.coder.silver_innovation.block.custom.StrawberryBushBlock;
 import net.coder.silver_innovation.block.custom.StrawberryCropBlock;
 import net.coder.silver_innovation.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -41,6 +42,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = registerBlock("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> STRAWBERRY_BUSH = registerBlock("strawberry_bush",
+            () -> new StrawberryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().noCollission()));
 
     
 
