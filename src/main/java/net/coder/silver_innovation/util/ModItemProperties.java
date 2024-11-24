@@ -56,4 +56,10 @@ public class ModItemProperties {
             return p_174632_ != null && p_174632_.isUsingItem() && p_174632_.getUseItem() == p_174630_ ? 1.0F : 0.0F;
         });
     }
+
+    private static void makeTrident(Item item) {
+        ItemProperties.register(item, new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
+            return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;
+        });
+    }
 }
