@@ -11,6 +11,7 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 
+
 public class ThrownPikeSpearModel<T extends Entity> extends EntityModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(SilverInnovation.MOD_ID, "pike_spear "), "main");
     private final ModelPart pike_spear;

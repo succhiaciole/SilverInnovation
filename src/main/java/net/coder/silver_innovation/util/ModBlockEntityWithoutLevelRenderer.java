@@ -13,9 +13,13 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ModBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLevelRenderer {
+@SuppressWarnings("rawtypes")
+public class ModBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLevelRenderer implements ResourceManagerReloadListener {
     private ThrownPikeSpearModel pikeSpearModel;
     private final EntityModelSet entityModelSet;
     private final BlockEntityRenderDispatcher blockEntityRenderDispatcher;
@@ -27,8 +31,6 @@ public class ModBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLevelR
         this.blockEntityRenderDispatcher = blockEntityRenderDispatcher;
     }
 
-
-    @Override
     public void onResourceManagerReload(ResourceManager pResourceManager) {
         this.pikeSpearModel = new ThrownPikeSpearModel(this.entityModelSet.bakeLayer(ThrownPikeSpearModel.LAYER_LOCATION));
     }
