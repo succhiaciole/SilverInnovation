@@ -10,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SilverMissleRenderer extends ArrowRenderer<SilverMissleEntity> {
     public SilverMissleRenderer(EntityRendererProvider.Context context) {
         super(context);

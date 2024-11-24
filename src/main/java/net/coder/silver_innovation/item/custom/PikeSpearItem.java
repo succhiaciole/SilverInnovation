@@ -2,7 +2,9 @@ package net.coder.silver_innovation.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.coder.silver_innovation.entity.client.renderer.ThrownPikeSpearRenderer;
 import net.coder.silver_innovation.entity.projectile.ThrownPikeSpear;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -24,12 +26,12 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+
+import java.util.function.Consumer;
 
 public class PikeSpearItem  extends Item implements Vanishable {
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
-    public static final int THROW_THRESHOLD_TIME = 10;
-    public static final float BASE_DAMAGE = 7.6F;
-    public static final float SHOOT_POWER = 2F;
 
     public PikeSpearItem(Properties pProperties) {
         super(pProperties);
@@ -39,8 +41,17 @@ public class PikeSpearItem  extends Item implements Vanishable {
         this.defaultModifiers = builder.build();
     }
 
-
     @Override
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return new ThrownPikeSpearRenderer();
+            }
+        });
+    }
+
     public void releaseUsing(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving, int pTimeLeft) {
         if (pEntityLiving instanceof Player player) {
             int i = this.getUseDuration(pStack) - pTimeLeft;
@@ -52,7 +63,7 @@ public class PikeSpearItem  extends Item implements Vanishable {
                             p_43388_.broadcastBreakEvent(pEntityLiving.getUsedItemHand());
                         });
                         if (j == 0) {
-                            ThrownPikeSpear thrownPikeSpear = new ThrownPikeSpear(pLevel, player, pStack);
+                            ThrownPikeSpear thrownPikeSpear = new ThrownPikeSpear(player, pLevel, );
                             thrownPikeSpear.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.5F + (float)j * 0.5F, 1.0F);
                             if (player.getAbilities().instabuild) {
                                 thrownPikeSpear.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
