@@ -5,6 +5,7 @@ import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.entity.client.ModModelLayers;
 import net.coder.silver_innovation.entity.client.renderer.SilverMissleRenderer;
 import net.coder.silver_innovation.entity.client.SilverGolemModel;
+import net.coder.silver_innovation.entity.client.renderer.ThrownPikeSpearRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

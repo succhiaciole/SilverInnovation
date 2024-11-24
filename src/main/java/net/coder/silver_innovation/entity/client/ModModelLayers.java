@@ -12,4 +12,6 @@ public class ModModelLayers {
 
    public static final ModelLayerLocation SILVER_GOLEM_LAYER = new ModelLayerLocation(
            new ResourceLocation(SilverInnovation.MOD_ID, "silver_golem_layer"),"main");
+   public static final ModelLayerLocation PIKE_SPEAR_LAYER = new ModelLayerLocation(
+           new ResourceLocation(SilverInnovation.MOD_ID, "pike_spear_layer"),"main");
 }

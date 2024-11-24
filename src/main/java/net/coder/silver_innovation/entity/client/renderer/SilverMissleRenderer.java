@@ -19,6 +19,6 @@ public class SilverMissleRenderer extends ArrowRenderer<SilverMissleEntity> {
     @Override
     public ResourceLocation getTextureLocation(SilverMissleEntity pEntity) {
         Item referenceItem = ModItems.SILVER_MISSLE.get();
-        return new ResourceLocation(SilverInnovation.MOD_ID, "textures/entity/projectiles/" + "silver_missle" + ".png");
+        return new ResourceLocation(SilverInnovation.MOD_ID, "textures/entity/projectiles" + "silver_missle" + ".png");
     }
 }

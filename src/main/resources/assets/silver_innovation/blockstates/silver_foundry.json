@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "silver_innovation:block/silver_foundry"
+    },
+    "facing=east": {
+      "model": "silver_innovation:block/silver_foundry",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "silver_innovation:block/silver_foundry",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "silver_innovation:block/silver_foundry",
+      "y": 270
     }
   }
 }

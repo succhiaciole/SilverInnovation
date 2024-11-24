@@ -15,9 +15,13 @@ import net.coder.silver_innovation.recipe.ModRecipes;
 import net.coder.silver_innovation.screen.ModMenuTypes;
 import net.coder.silver_innovation.screen.SilverFoundryScreen;
 import net.coder.silver_innovation.sound.ModSounds;
+import net.coder.silver_innovation.util.ModBlockEntityWithoutLevelRenderer;
 import net.coder.silver_innovation.util.ModItemProperties;
 import net.coder.silver_innovation.villager.ModVillagers;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.model.geom.EntityModelSet;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,7 +45,6 @@ public class SilverInnovation {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
