@@ -2,9 +2,12 @@ package net.coder.silver_innovation.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.entity.client.renderer.ThrownPikeSpearRenderer;
 import net.coder.silver_innovation.entity.projectile.ThrownPikeSpear;
+import net.coder.silver_innovation.util.ModBlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -46,7 +49,7 @@ public class PikeSpearItem  extends Item implements Vanishable {
         consumer.accept(new IClientItemExtensions() {
 
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public ModBlockEntityWithoutLevelRenderer getCustomRenderer() {
                 return new ThrownPikeSpearRenderer();
             }
         });
