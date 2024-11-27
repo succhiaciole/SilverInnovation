@@ -50,8 +50,6 @@ public class ModItems {
             () -> new SilverShortbowItem(new Item.Properties().durability(298).fireResistant()));
     public static final RegistryObject<Item> SILVER_MISSLE = ITEMS.register("silver_missle",
             () -> new SilverMissleItem(1.7f, new Item.Properties()));
-    public static final RegistryObject<Item> PIKE_SPEAR = ITEMS.register("pike_spear",
-            () -> new PikeSpearItem(new Item.Properties().durability(576)));
 
     public static final RegistryObject<Item> SILVER_GOLEM_SPAWN_EGG = ITEMS.register("silver_golem_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SILVER_GOLEM, 7956848, 15265265, new Item.Properties()));

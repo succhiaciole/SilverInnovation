@@ -5,7 +5,6 @@ import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.entity.client.ModModelLayers;
 import net.coder.silver_innovation.entity.client.renderer.SilverMissleRenderer;
 import net.coder.silver_innovation.entity.client.SilverGolemModel;
-import net.coder.silver_innovation.entity.client.renderer.ThrownPikeSpearRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +19,5 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.SILVER_MISSLE.get(), SilverMissleRenderer::new);
-        event.registerEntityRenderer(ModEntities.PIKE_SPEAR.get(), ThrownPikeSpearRenderer::new);
     }
 }

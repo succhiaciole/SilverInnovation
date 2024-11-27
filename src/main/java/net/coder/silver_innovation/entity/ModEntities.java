@@ -3,7 +3,6 @@ package net.coder.silver_innovation.entity;
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.entity.projectile.SilverMissleEntity;
 import net.coder.silver_innovation.entity.custom.SilverGolemEntity;
-import net.coder.silver_innovation.entity.projectile.ThrownPikeSpear;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -25,14 +24,6 @@ public class ModEntities {
                     .clientTrackingRange(4)
                     .updateInterval(20)
                     .build(new ResourceLocation(SilverInnovation.MOD_ID, "silver_missle").toString()));
-    public static final RegistryObject<EntityType<ThrownPikeSpear>> PIKE_SPEAR =
-            ENTITY_TYPES.register("pike_spear", () -> EntityType.Builder.<ThrownPikeSpear>of(ThrownPikeSpear::new, MobCategory.MISC)
-                    .sized(0.5F, 0.5F)
-                    .clientTrackingRange(4)
-                    .updateInterval(20)
-                    .build(new ResourceLocation(SilverInnovation.MOD_ID, "pike_spear").toString()));
-
-
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

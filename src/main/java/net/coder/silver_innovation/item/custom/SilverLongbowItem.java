@@ -101,7 +101,8 @@ public class SilverLongbowItem extends BowItem {
             }
         }
     }
-        public static float getPowerForTime(int pCharge) {
+
+    public static float getPowerForTime(int pCharge) {
             float f = (float)pCharge / 30.0F;
             f = (f * f + f * 5F) / 2.0F;
             if (f > 1.0F) {
