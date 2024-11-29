@@ -41,6 +41,13 @@
 
   "creativetab.silver_innovation" : "Silver Innovation",
 
+  "block.silver_innovation.mahogany_log" : "Mahogany Log",
+  "block.silver_innovation.mahogany_wood" : "Mahogany Wood",
+  "block.silver_innovation.stripped_mahogany_log" : "Stripped Mahogany Log",
+  "block.silver_innovation.stripped_mahogany_wood" : "Stripped Mahogany Wood",
+  "block.silver_innovation.mahogany_planks" : "Mahogany Planks",
+  "block.silver_innovation.mahogany_leaves" : "Mahogany Leaves",
+
   "block.silver_innovation.silver_block" : "Block Of Silver",
   "block.silver_innovation.raw_silver_block" : "Block Of Raw Silver",
   "block.silver_innovation.silver_ore" : "Silver Ore",

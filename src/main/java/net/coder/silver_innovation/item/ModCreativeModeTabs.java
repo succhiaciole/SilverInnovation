@@ -62,6 +62,13 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.SILVER_GOLEM_SPAWN_EGG.get());
 
+                        pOutput.accept(ModBlocks.MAHOGANY_LOG.get());
+                        pOutput.accept(ModBlocks.MAHOGANY_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+                        pOutput.accept(ModBlocks.MAHOGANY_PLANKS.get());
+                        pOutput.accept(ModBlocks.MAHOGANY_LEAVES.get());
+
                         pOutput.accept(ModBlocks.SILVER_BLOCK.get());
                         pOutput.accept(ModBlocks.SILVER_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());

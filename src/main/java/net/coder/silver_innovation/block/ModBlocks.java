@@ -1,16 +1,18 @@
 package net.coder.silver_innovation.block;
 
 import net.coder.silver_innovation.SilverInnovation;
-import net.coder.silver_innovation.block.custom.SilverFoundryBlock;
-import net.coder.silver_innovation.block.custom.StrawberryBushBlock;
-import net.coder.silver_innovation.block.custom.StrawberryCropBlock;
+import net.coder.silver_innovation.block.custom.*;
 import net.coder.silver_innovation.item.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -45,7 +47,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRAWBERRY_BUSH = registerBlock("strawberry_bush",
             () -> new StrawberryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().noCollission()));
 
-    
+    public static final RegistryObject<Block> MAHOGANY_LOG = registerBlock("mahogany_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(1.5f)));
+    public static final RegistryObject<Block> MAHOGANY_WOOD = registerBlock("mahogany_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(1.5f)));
+    public static final RegistryObject<Block> STRIPPED_MAHOGANY_LOG = registerBlock("stripped_mahogany_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(1.5f)));
+    public static final RegistryObject<Block> STRIPPED_MAHOGANY_WOOD = registerBlock("stripped_mahogany_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(1.5f)));
+
+    public static final RegistryObject<Block> MAHOGANY_PLANKS = registerBlock("mahogany_planks",
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(1.5f)));
+    public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> SILVER_STAIRS = registerBlock("silver_stairs",
             () -> new StairBlock(() -> ModBlocks.SILVER_BLOCK.get().defaultBlockState(),

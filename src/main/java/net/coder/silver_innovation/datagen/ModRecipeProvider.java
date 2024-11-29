@@ -3,6 +3,7 @@ package net.coder.silver_innovation.datagen;
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.ModBlocks;
 import net.coder.silver_innovation.item.ModItems;
+import net.coder.silver_innovation.util.ModTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
@@ -181,6 +182,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('Z', ModItems.CARBON_DUST.get())
                 .define('X', ModItems.SILVER_BOW.get())
                 .unlockedBy(getHasName(ModItems.SILVER_BOW.get()), has(ModItems.SILVER_BOW.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_WOOD.get())
+                .pattern("   ")
+                .pattern(" ##")
+                .pattern(" ##")
+                .define('#', ModBlocks.MAHOGANY_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.MAHOGANY_LOG.get()), has(ModBlocks.MAHOGANY_LOG.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_MAHOGANY_WOOD.get())
+                .pattern("   ")
+                .pattern(" ##")
+                .pattern(" ##")
+                .define('#', ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.STRIPPED_MAHOGANY_WOOD.get()), has(ModBlocks.STRIPPED_MAHOGANY_LOG.get()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.SILVER_BUTTON.get())

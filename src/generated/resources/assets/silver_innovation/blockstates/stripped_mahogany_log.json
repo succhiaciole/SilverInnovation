@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "silver_innovation:block/stripped_mahogany_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "silver_innovation:block/stripped_mahogany_log"
+    },
+    "axis=z": {
+      "model": "silver_innovation:block/stripped_mahogany_log_horizontal",
+      "x": 90
+    }
+  }
+}

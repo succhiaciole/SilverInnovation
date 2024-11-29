@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mahogany_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "silver_innovation:mahogany_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "silver_innovation:mahogany_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_mahogany_log",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "silver_innovation:mahogany_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -80,5 +80,20 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SILVER_PRESSURE_PLATE.get());
         this.tag(BlockTags.BUTTONS)
                 .add(ModBlocks.SILVER_BUTTON.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAHOGANY_LOG.get())
+                .add(ModBlocks.MAHOGANY_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.MAHOGANY_PLANKS.get());
+
+        this.tag(ModTags.Blocks.MAHOGANY_LOGS)
+                .add(ModBlocks.MAHOGANY_LOG.get())
+                .add(ModBlocks.MAHOGANY_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
     }
 }

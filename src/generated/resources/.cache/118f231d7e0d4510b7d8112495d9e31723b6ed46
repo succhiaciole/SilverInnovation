@@ -1,3 +1,6 @@
-// 1.20.1	2024-11-14T15:47:46.3192946	Tags for minecraft:item mod id silver_innovation
+// 1.20.1	2024-11-29T23:15:45.0615149	Tags for minecraft:item mod id silver_innovation
 df1486882c33c96ae1b3ab6e1c45ce8df25a505a data/forge/tags/items/tools/bows.json
+ba6fb4a1f46791db6fc87bfa81824542b1282b8c data/minecraft/tags/items/logs_that_burn.json
+90818a2953a2ef87b73c9a35d167b770e9b9aab5 data/minecraft/tags/items/planks.json
 175a0d5ab03b39719f46d40f7b8d90cb27d62d09 data/minecraft/tags/items/trimmable_armor.json
+ba6fb4a1f46791db6fc87bfa81824542b1282b8c data/silver_innovation/tags/items/mahogany_logs.json

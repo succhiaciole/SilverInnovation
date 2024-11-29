@@ -16,7 +16,7 @@
               "block": "silver_innovation:strawberry_bush",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "3"
+                "age": "4"
               }
             }
           ],

@@ -37,8 +37,5 @@ public class StrawberryCropBlock extends CropBlock {
 
     public StrawberryCropBlock(Properties pProperties) {
         super(pProperties);
-
-
-
     }
 }
