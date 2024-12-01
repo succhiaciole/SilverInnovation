@@ -16,8 +16,10 @@ import net.coder.silver_innovation.screen.ModMenuTypes;
 import net.coder.silver_innovation.screen.SilverFoundryScreen;
 import net.coder.silver_innovation.sound.ModSounds;
 import net.coder.silver_innovation.util.ModItemProperties;
+import net.coder.silver_innovation.util.ModWoodTypes;
 import net.coder.silver_innovation.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -79,6 +81,8 @@ public class SilverInnovation {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.MAHOGANY);
+
             EntityRenderers.register(ModEntities.SILVER_GOLEM.get(), SilverGolemRenderer::new);
             ModItemProperties.addCustomItemProperties();
 

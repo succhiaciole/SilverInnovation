@@ -3,16 +3,13 @@ package net.coder.silver_innovation.block;
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.custom.*;
 import net.coder.silver_innovation.item.ModItems;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.coder.silver_innovation.util.ModWoodTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -61,6 +58,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
+    public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlock("mahogany_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));
+    public static final RegistryObject<Block> MAHOGANY_WALL_SIGN = registerBlock("mahogany_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MAHOGANY));
+    public static final RegistryObject<Block> MAHOGANY_HANGING_SIGN = registerBlock("mahogany_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MAHOGANY));
+    public static final RegistryObject<Block> MAHOGANY_WALL_HANGING_SIGN = registerBlock("mahogany_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAHOGANY));
+
     public static final RegistryObject<Block> SILVER_STAIRS = registerBlock("silver_stairs",
             () -> new StairBlock(() -> ModBlocks.SILVER_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
@@ -86,8 +92,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_TRAPDOOR = registerBlock("silver_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .noOcclusion(), BlockSetType.IRON));
-
-
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

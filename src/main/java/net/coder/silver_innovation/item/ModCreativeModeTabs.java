@@ -67,6 +67,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
                         pOutput.accept(ModBlocks.MAHOGANY_PLANKS.get());
+                        pOutput.accept(ModItems.MAHOGANY_SIGN.get());
+                        pOutput.accept(ModItems.MAHOGANY_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.MAHOGANY_LEAVES.get());
 
                         pOutput.accept(ModBlocks.SILVER_BLOCK.get());

@@ -76,6 +76,10 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final RegistryObject<Item> MAHOGANY_SIGN = ITEMS.register("mahogany_item_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAHOGANY_SIGN.get(), ModBlocks.MAHOGANY_WALL_SIGN.get()));
+    public static final RegistryObject<Item> MAHOGANY_HANGING_SIGN = ITEMS.register("mahogany_item_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.MAHOGANY_HANGING_SIGN.get(), ModBlocks.MAHOGANY_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

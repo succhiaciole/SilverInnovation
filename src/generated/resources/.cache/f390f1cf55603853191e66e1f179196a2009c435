@@ -1,6 +1,8 @@
-// 1.20.1	2024-11-20T16:40:53.1357737	Item Models: silver_innovation
+// 1.20.1	2024-12-01T10:00:43.21114	Item Models: silver_innovation
 5f943a9fcf744e57b697cc38b332a56d08b25ba5 assets/silver_innovation/models/item/anthracite.json
 5802f4eab294ccb7cca068a247d80aa5727a9f17 assets/silver_innovation/models/item/carbon_dust.json
+6212c9bf351e848818deb30563b7d935540902ef assets/silver_innovation/models/item/mahogany_item_hanging_sign.json
+af3f4a65684a70353dd98245b27f7ed345964573 assets/silver_innovation/models/item/mahogany_item_sign.json
 ccb365fc58bfff672386024a59ed90ff8b498fb5 assets/silver_innovation/models/item/metal_detector.json
 50b350bc919e6e4d4dbcd1303b18d106876b665b assets/silver_innovation/models/item/raw_silver.json
 a2adebb9aab070ccf6d80c2268ca28263610fe44 assets/silver_innovation/models/item/silver_axe.json

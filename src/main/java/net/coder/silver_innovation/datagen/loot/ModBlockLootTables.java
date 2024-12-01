@@ -84,7 +84,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.MAHOGANY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.MAHOGANY_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-   }
+
+        this.add(ModBlocks.MAHOGANY_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAHOGANY_SIGN.get()));
+        this.add(ModBlocks.MAHOGANY_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAHOGANY_SIGN.get()));
+        this.add(ModBlocks.MAHOGANY_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAHOGANY_HANGING_SIGN.get()));
+        this.add(ModBlocks.MAHOGANY_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAHOGANY_HANGING_SIGN.get()));
+    }
 
     protected LootTable.Builder createIronLikeOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay

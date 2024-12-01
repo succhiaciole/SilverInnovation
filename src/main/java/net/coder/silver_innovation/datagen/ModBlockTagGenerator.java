@@ -95,5 +95,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MAHOGANY_WOOD.get())
                 .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
                 .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+
+        this.tag(BlockTags.SIGNS)
+                .add(ModBlocks.MAHOGANY_SIGN.get());
+        this.tag(BlockTags.WALL_SIGNS)
+                .add(ModBlocks.MAHOGANY_WALL_SIGN.get());
+        this.tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(ModBlocks.MAHOGANY_HANGING_SIGN.get());
+        this.tag(BlockTags.WALL_HANGING_SIGNS)
+                .add(ModBlocks.MAHOGANY_WALL_HANGING_SIGN.get());
+
     }
 }

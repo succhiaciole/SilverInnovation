@@ -24,31 +24,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-          blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
-          blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
+        blockWithItem(ModBlocks.SILVER_BLOCK);
 
-          blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
-          blockWithItem(ModBlocks.SILVER_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
+        blockWithItem(ModBlocks.SILVER_ORE);
 
-          blockWithItem(ModBlocks.CARBON_DUST_BLOCK);
+        blockWithItem(ModBlocks.CARBON_DUST_BLOCK);
 
-          blockWithItem(ModBlocks.DEEPSLATE_CARBON_ORE);
-          blockWithItem(ModBlocks.CARBON_ORE);
-          
-          stairsBlock(((StairBlock) ModBlocks.SILVER_STAIRS.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
-          slabBlock(((SlabBlock) ModBlocks.SILVER_SLAB.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        blockWithItem(ModBlocks.DEEPSLATE_CARBON_ORE);
+        blockWithItem(ModBlocks.CARBON_ORE);
 
-          buttonBlock(((ButtonBlock) ModBlocks.SILVER_BUTTON.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
-          pressurePlateBlock(((PressurePlateBlock) ModBlocks.SILVER_PRESSURE_PLATE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        stairsBlock(((StairBlock) ModBlocks.SILVER_STAIRS.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        slabBlock(((SlabBlock) ModBlocks.SILVER_SLAB.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
 
-          fenceBlock(((FenceBlock) ModBlocks.SILVER_FENCE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
-          fenceGateBlock(((FenceGateBlock) ModBlocks.SILVER_FENCE_GATE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
-          wallBlock(((WallBlock) ModBlocks.SILVER_WALL.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.SILVER_BUTTON.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.SILVER_PRESSURE_PLATE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
 
-          doorBlockWithRenderType(((DoorBlock) ModBlocks.SILVER_DOOR.get()), modLoc("block/silver_door_bottom"),modLoc("block/silver_door_top"),"cutout");
-          trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SILVER_TRAPDOOR.get()), modLoc("block/silver_trapdoor"),true,"cutout");
+        fenceBlock(((FenceBlock) ModBlocks.SILVER_FENCE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.SILVER_FENCE_GATE.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
+        wallBlock(((WallBlock) ModBlocks.SILVER_WALL.get()), blockTexture(ModBlocks.SILVER_BLOCK.get()));
 
-          makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.SILVER_DOOR.get()), modLoc("block/silver_door_bottom"), modLoc("block/silver_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SILVER_TRAPDOOR.get()), modLoc("block/silver_trapdoor"), true, "cutout");
+
+        makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
 
         logBlock(((RotatedPillarBlock) ModBlocks.MAHOGANY_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.MAHOGANY_WOOD.get()), blockTexture(ModBlocks.MAHOGANY_LOG.get()), blockTexture(ModBlocks.MAHOGANY_LOG.get()));
@@ -66,6 +66,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MAHOGANY_PLANKS);
 
         leavesBlock(ModBlocks.MAHOGANY_LEAVES);
+
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
