@@ -1,0 +1,16 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "silver_innovation:raw_silver"
+    },
+    {
+      "item": "silver_innovation:anthracite"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "silver_innovation:silver_ingot"
+  }
+}

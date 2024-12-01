@@ -31,7 +31,6 @@ import java.util.Optional;
 public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(3);
 
-
     private static final int INPUT_SLOT_1 = 0;
     private static final int INPUT_SLOT_2 = 1;
     private static final int OUTPUT_SLOT = 2;

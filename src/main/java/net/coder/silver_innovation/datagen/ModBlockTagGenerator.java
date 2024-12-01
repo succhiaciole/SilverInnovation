@@ -27,8 +27,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CARBON_ORE.get())
                 .addTag(Tags.Blocks.ORES);
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.DEEPSLATE_CARBON_ORE.get());
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
@@ -40,7 +39,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     (ModBlocks.SILVER_FENCE.get()),
                     (ModBlocks.SILVER_FENCE_GATE.get()),
                     (ModBlocks.SILVER_DOOR.get()),
-                    (ModBlocks.SILVER_FOUNDRY.get()));
+                    (ModBlocks.SILVER_FOUNDRY.get()),
+                    (ModBlocks.DEEPSLATE_CARBON_ORE.get()),
+                        (ModBlocks.SILVER_ORE.get()),
+                        (ModBlocks.DEEPSLATE_SILVER_ORE.get()),
+                        (ModBlocks.CARBON_ORE.get()));
+
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SILVER_ORE.get(),
@@ -68,7 +72,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.CARBON_DUST_BLOCK.get());
-
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.SILVER_FENCE.get());

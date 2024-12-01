@@ -7,7 +7,7 @@
       "item": "silver_innovation:mahogany_planks"
     },
     "X": {
-      "item": "forge:rods/wooden"
+      "tag": "forge:rods/wooden"
     }
   },
   "pattern": [

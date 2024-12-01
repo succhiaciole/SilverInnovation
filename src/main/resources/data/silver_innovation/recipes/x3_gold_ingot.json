@@ -1,0 +1,16 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "silver_innovation:anthracite"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:gold_ingot"
+  }
+}

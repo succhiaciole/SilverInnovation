@@ -1,0 +1,16 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "silver_innovation:carbon_dust"
+    },
+    {
+      "item": "silver_innovation:silver_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "silver_innovation:anthracite"
+  }
+}
