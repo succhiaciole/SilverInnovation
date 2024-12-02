@@ -15,14 +15,6 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SilverInnovation.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TESTS = CREATIVE_MODE_TABS.register("tests",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Blocks.BARRIER))
-                    .title(Component.translatable("creativetab.tests"))
-                    .displayItems((pParameters, pOutput) -> {
-                    })
-                    .build());
-
 
     public static final RegistryObject<CreativeModeTab> SILVER_INNOVATION = CREATIVE_MODE_TABS.register("silver_innovation",
             () -> CreativeModeTab.builder()
@@ -56,6 +48,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_SHOVEL.get());
                         pOutput.accept(ModItems.SILVER_HOE.get());
                         pOutput.accept(ModItems.SILVER_HAMMER.get());
+                        pOutput.accept(ModItems.SCISSORS.get());
                         pOutput.accept(ModItems.SILVER_BOW.get());
                         pOutput.accept(ModItems.SILVER_LONGBOW.get());
                         pOutput.accept(ModItems.SILVER_SHORTBOW.get());
@@ -70,6 +63,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MAHOGANY_SIGN.get());
                         pOutput.accept(ModItems.MAHOGANY_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.MAHOGANY_LEAVES.get());
+                        pOutput.accept(ModBlocks.MAHOGANY_SAPLING.get());
 
                         pOutput.accept(ModBlocks.SILVER_BLOCK.get());
                         pOutput.accept(ModBlocks.SILVER_ORE.get());

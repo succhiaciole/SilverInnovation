@@ -1,7 +1,8 @@
-// 1.20.1	2024-12-01T10:47:43.6468588	Registries
+// 1.20.1	2024-12-02T17:41:01.4756968	Registries
 965cf769ddfbf66d7390379f85dd8f529af63d3b data/silver_innovation/forge/biome_modifier/add_carbon_ore.json
 00ca16dda7c5ed4d1043c05a09cc6c7b5828135a data/silver_innovation/forge/biome_modifier/add_silver_ore.json
 850fe3d8498c05d3594b0509f43c8ba9b358ecee data/silver_innovation/worldgen/configured_feature/carbon_ore.json
+c12d3d47b1a4e5c2612f1e0a4fd3246e980a3f71 data/silver_innovation/worldgen/configured_feature/mahogany.json
 5801167530f5a311287afe96b9f58c43fe549ed8 data/silver_innovation/worldgen/configured_feature/silver_ore.json
 1d60049cc2ce9dc83252ad01e13b39e467cdef49 data/silver_innovation/worldgen/placed_feature/carbon_ore_placed.json
 a446bbd6cd32ab850f946ab1a1d5e93742ee6696 data/silver_innovation/worldgen/placed_feature/silver_ore_placed.json

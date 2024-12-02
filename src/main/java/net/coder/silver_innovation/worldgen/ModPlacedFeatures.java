@@ -29,7 +29,6 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
-
     }
 
 

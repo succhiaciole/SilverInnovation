@@ -46,6 +46,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
         this.dropSelf(ModBlocks.MAHOGANY_PLANKS.get());
+        this.dropSelf(ModBlocks.MAHOGANY_SAPLING.get());
 
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createIronLikeOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
@@ -83,7 +84,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.STRAWBERRY_BUSH.get(), createBushLikeDrops(ModBlocks.STRAWBERRY_BUSH.get(), ModItems.STRAWBERRY.get(), lootitemconditionBbuilder));
 
         this.add(ModBlocks.MAHOGANY_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.MAHOGANY_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, ModBlocks.MAHOGANY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.MAHOGANY_SIGN.get(), block ->
                 createSingleItemTable(ModItems.MAHOGANY_SIGN.get()));

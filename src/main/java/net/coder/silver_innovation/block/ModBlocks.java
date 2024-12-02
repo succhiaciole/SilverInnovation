@@ -4,6 +4,7 @@ import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.custom.*;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.util.ModWoodTypes;
+import net.coder.silver_innovation.worldgen.tree.MahoganyTreeGrower;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -57,6 +58,10 @@ public class ModBlocks {
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(1.5f)));
     public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling",
+            () -> new SaplingBlock(new MahoganyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).randomTicks().instabreak().noOcclusion().noCollission()));
+
 
     public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlock("mahogany_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));

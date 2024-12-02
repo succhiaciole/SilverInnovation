@@ -93,6 +93,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.MAHOGANY_PLANKS.get());
 
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.MAHOGANY_LEAVES.get());
+
         this.tag(ModTags.Blocks.MAHOGANY_LOGS)
                 .add(ModBlocks.MAHOGANY_LOG.get())
                 .add(ModBlocks.MAHOGANY_WOOD.get())

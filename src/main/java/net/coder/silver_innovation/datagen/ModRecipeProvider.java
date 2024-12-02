@@ -200,16 +200,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.STRIPPED_MAHOGANY_WOOD.get()), has(ModBlocks.STRIPPED_MAHOGANY_LOG.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_FOUNDRY.get())
-                .pattern("###")
-                .pattern("@#@")
-                .pattern("#&#")
-                .define('#', ModItems.SILVER_INGOT.get())
-                .define('@', Blocks.FURNACE)
-                .define('&', Blocks.CAULDRON)
-                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
-                .save(pWriter);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SILVER_UPGRADE_SMITHING_TEMPLATE.get())
                 .pattern("#@#")
                 .pattern("#&#")
@@ -217,6 +207,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('@', ModItems.SILVER_INGOT.get())
                 .define('#', ModItems.SILVER_NUGGET.get())
                 .define('&', ModItems.CARBON_DUST.get())
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SCISSORS.get())
+                .pattern(" #")
+                .pattern("# ")
+                .define('#', ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
