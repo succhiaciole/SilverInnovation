@@ -40,6 +40,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_BUSH.get(), new Item.Properties().food(ModFoods.STRAWBERRY)));
     public static final RegistryObject<Item> SILVER_STRAWBERRY = ITEMS.register("silver_strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.SILVER_STRAWBERRY)));
+    public static final RegistryObject<Item> ENCHANTED_SILVER_STRAWBERRY = ITEMS.register("enchanted_silver_strawberry",
+            () -> new EnchantedSilverStrawberryItem(new Item.Properties().food(ModFoods.ENCHANTED_SILVER_STRAWBERRY).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 

@@ -62,7 +62,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling",
             () -> new SaplingBlock(new MahoganyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).randomTicks().instabreak().noOcclusion().noCollission()));
 
-
     public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlock("mahogany_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));
     public static final RegistryObject<Block> MAHOGANY_WALL_SIGN = registerBlock("mahogany_wall_sign",

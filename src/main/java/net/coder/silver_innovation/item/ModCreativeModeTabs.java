@@ -6,7 +6,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -32,9 +31,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILVER_LEGGINGS.get());
                         pOutput.accept(ModItems.SILVER_BOOTS.get());
 
-                        pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.SILVER_STRAWBERRY.get());
+                        pOutput.accept(ModItems.ENCHANTED_SILVER_STRAWBERRY.get());
 
                         pOutput.accept(ModItems.CARBON_DUST.get());
                         pOutput.accept(ModItems.ANTHRACITE.get());

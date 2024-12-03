@@ -7,6 +7,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -26,6 +28,10 @@ public class ScissorsItem extends Item {
         return pBlock.is(Blocks.COBWEB) || pBlock.is(Blocks.REDSTONE_WIRE) || pBlock.is(Blocks.TRIPWIRE);
     }
 
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return Enchantments.BLOCK_FORTUNE.category.canEnchant(stack.getItem()) || Enchantments.BLOCK_EFFICIENCY.category.canEnchant(stack.getItem());
+    }
+
     public float getDestroySpeed(ItemStack pStack, BlockState pState) {
         if (!pState.is(Blocks.COBWEB) && !pState.is(BlockTags.LEAVES)) {
             if (pState.is(BlockTags.WOOL)) {
@@ -37,6 +43,7 @@ public class ScissorsItem extends Item {
             return 15.0F;
         }
     }
+
     public boolean mineBlock(ItemStack pStack, Level pLevel, BlockState pState, BlockPos pPos, LivingEntity pEntityLiving) {
         if (!pLevel.isClientSide && !pState.is(BlockTags.FIRE)) {
             pStack.hurtAndBreak(1, pEntityLiving, (p_43076_) -> {

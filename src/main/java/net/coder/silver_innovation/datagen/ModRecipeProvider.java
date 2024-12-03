@@ -39,8 +39,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.25f, 200, "silver");
         oreBlasting(pWriter, CARBON_SMELTABLES, RecipeCategory.MISC, ModItems.CARBON_DUST.get(), 0.25f, 100, "carbon");
         oreSmelting(pWriter, CARBON_SMELTABLES, RecipeCategory.MISC, ModItems.CARBON_DUST.get(), 0.25f, 200, "carbon");
-        oreSmelting(pWriter, TO_ANTHRACITE, RecipeCategory.MISC, ModItems.ANTHRACITE.get(), 0.75f, 500, "anthracite");
-
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_SLAB.get(),6)
                 .pattern("   ")
