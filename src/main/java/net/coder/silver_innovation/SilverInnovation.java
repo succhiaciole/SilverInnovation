@@ -18,6 +18,7 @@ import net.coder.silver_innovation.sound.ModSounds;
 import net.coder.silver_innovation.util.ModItemProperties;
 import net.coder.silver_innovation.util.ModWoodTypes;
 import net.coder.silver_innovation.villager.ModVillagers;
+import net.coder.silver_innovation.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -58,6 +59,8 @@ public class SilverInnovation {
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+
+        ModTrunkPlacerTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

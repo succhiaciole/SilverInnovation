@@ -2,6 +2,7 @@ package net.coder.silver_innovation.worldgen;
 
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.block.ModBlocks;
+import net.coder.silver_innovation.worldgen.tree.custom.MahoganyTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -55,12 +56,17 @@ public class ModConfiguredFeatures {
 
         register(context, MAHOGANY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MAHOGANY_LOG.get()),
-                new StraightTrunkPlacer(5, 4, 3),
-
+                new MahoganyTrunkPlacer(7, 1, 0,
+                        new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder()
+                                .add(ConstantInt.of(1), 1)
+                                .add(ConstantInt.of(2), 1)
+                                .add(ConstantInt.of(3), 1)
+                                .build()), UniformInt.of(2, 4), UniformInt.of(-4, -3), UniformInt.of(-1, 0)),
                 BlockStateProvider.simple(ModBlocks.MAHOGANY_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
-
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
+                new TwoLayersFeatureSize(1, 0, 2))
+                .ignoreVines()
+                .build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
