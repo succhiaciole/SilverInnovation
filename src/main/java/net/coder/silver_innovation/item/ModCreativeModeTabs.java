@@ -34,13 +34,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.SILVER_STRAWBERRY.get());
-                        pOutput.accept(ModItems.ENCHANTED_SILVER_STRAWBERRY.get());
 
                         pOutput.accept(ModItems.CARBON_DUST.get());
                         pOutput.accept(ModItems.ANTHRACITE.get());
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.SILVER_MISSLE.get());
+                        pOutput.accept(ModItems.SILVER_SURPRISE.get());
 
                         pOutput.accept(ModItems.SILVER_SWORD.get());
                         pOutput.accept(ModItems.SILVER_PICKAXE.get());

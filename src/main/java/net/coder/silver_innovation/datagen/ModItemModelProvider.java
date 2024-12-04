@@ -55,6 +55,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_SILVER);
         simpleItem(ModItems.SILVER_NUGGET);
         simpleItem(ModItems.SILVER_LIMB);
+        simpleItem(ModItems.SILVER_SURPRISE);
 
         simpleItem(ModItems.MAHOGANY_SIGN);
         simpleItem(ModItems.MAHOGANY_HANGING_SIGN);

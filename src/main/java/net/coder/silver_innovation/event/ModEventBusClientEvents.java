@@ -8,6 +8,7 @@ import net.coder.silver_innovation.entity.client.renderer.SilverMissleRenderer;
 import net.coder.silver_innovation.entity.client.SilverGolemModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,5 +30,6 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.SILVER_MISSLE.get(), SilverMissleRenderer::new);
+        event.registerEntityRenderer(ModEntities.SILVER_SURPRISE.get(), ThrownItemRenderer::new);
     }
 }

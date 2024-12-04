@@ -14,6 +14,7 @@
   "item.silver_innovation.silver_shortbow" : "Silver Shortbow",
   "item.silver_innovation.silver_missle" : "Silver Missle",
   "item.silver_innovation.silver_upgrade_smithing_template" : "Smithing Template",
+  "item.silver_innovation.silver_surprise" : "Silver Surprise",
 
   "item.minecraft.potion.effect.freeze_potion" : "Freeze Potion",
   "item.minecraft.splash_potion.effect.freeze_potion" : "Splash Potion of Freeze",
@@ -34,7 +35,6 @@
 
   "item.silver_innovation.strawberry" : "Strawberry",
   "item.silver_innovation.silver_strawberry" : "Silver Strawberry",
-  "item.silver_innovation.enchanted_silver_strawberry" : "Enchanted Silver Strawberry",
   "item.silver_innovation.strawberry_seeds" : "Strawberry Seeds",
   "item.silver_innovation.strawberry_bush" : "Strawberry Bush",
 
