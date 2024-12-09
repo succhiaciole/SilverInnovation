@@ -1,15 +1,15 @@
-package net.coder.silver_innovation.entity.projectile;
+package net.coder.silver_innovation.entity.projectile.bombs;
 
 import net.coder.silver_innovation.entity.ModEntities;
 import net.coder.silver_innovation.item.ModItems;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 
 public class SilverSurpriseEntity extends ThrowableItemProjectile {
     public SilverSurpriseEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
@@ -29,6 +29,17 @@ public class SilverSurpriseEntity extends ThrowableItemProjectile {
         return ModItems.SILVER_SURPRISE.get();
     }
 
+    @Override
+    public void tick() {
+        super.tick();
+        if (!this.isInWater() && this.level().isClientSide) {
+            for (int i = 0; i < 10; ++i) {
+                this.level().addParticle(ParticleTypes.ASH, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+                this.level().addParticle(ParticleTypes.ASH, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+                this.level().addParticle(ParticleTypes.ASH, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
+            }
+        }
+    }
 
     @Override
     protected void onHit(HitResult pResult) {

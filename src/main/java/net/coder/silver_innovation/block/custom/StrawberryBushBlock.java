@@ -36,7 +36,7 @@ public class StrawberryBushBlock extends SweetBerryBushBlock {
             int j = 1 + pLevel.random.nextInt(2);
             popResource(pLevel, pPos, new ItemStack(ModItems.STRAWBERRY.get(), j + (flag ? 1 : 0)));
             pLevel.playSound((Player)null, pPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + pLevel.random.nextFloat() * 0.4F);
-            BlockState blockstate = pState.setValue(AGE, Integer.valueOf(1));
+            BlockState blockstate = pState.setValue(AGE, 1);
             pLevel.setBlock(pPos, blockstate, 2);
             pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, blockstate));
             return InteractionResult.sidedSuccess(pLevel.isClientSide);

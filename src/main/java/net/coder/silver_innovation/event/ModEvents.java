@@ -2,6 +2,7 @@ package net.coder.silver_innovation.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.coder.silver_innovation.SilverInnovation;
+import net.coder.silver_innovation.enchantment.ModEnchantments;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.item.custom.HammerItem;
 import net.coder.silver_innovation.villager.ModVillagers;
@@ -12,6 +13,8 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
@@ -29,6 +32,7 @@ public class ModEvents {
     @SubscribeEvent
     public static void onHammerUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
+        int range = 1;
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
@@ -36,17 +40,17 @@ public class ModEvents {
             if (HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
-                for (BlockPos pos : HammerItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
-                    if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
-                        continue;
-                    }
-
-                    HARVESTED_BLOCKS.add(pos);
-                    serverPlayer.gameMode.destroyBlock(pos);
-                    HARVESTED_BLOCKS.remove(pos);
+            for (BlockPos pos : HammerItem.getBlocksToBeDestroyed(range, initialBlockPos, serverPlayer)) {
+                if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
+                    continue;
                 }
+
+                HARVESTED_BLOCKS.add(pos);
+                serverPlayer.gameMode.destroyBlock(pos);
+                HARVESTED_BLOCKS.remove(pos);
             }
         }
+    }
 
         @SubscribeEvent
         public static void addCustomTrades (VillagerTradesEvent event){

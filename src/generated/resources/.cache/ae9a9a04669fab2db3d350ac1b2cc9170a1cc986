@@ -1,11 +1,11 @@
-// 1.20.1	2024-12-02T18:20:34.3321687	Tags for minecraft:block mod id silver_innovation
+// 1.20.1	2024-12-08T12:02:59.8755207	Tags for minecraft:block mod id silver_innovation
 a13c8eb36de5553fa2073fba7a2f525c4b1ee027 data/minecraft/tags/blocks/buttons.json
 c2c8313ed3b259a83f9978356f78a07a79204e79 data/minecraft/tags/blocks/ceiling_hanging_signs.json
 68a6c4459112511f5709486233937e0e68eddd5d data/minecraft/tags/blocks/fences.json
 a72b4e9c2f45f277ba13efd722f1108f4456daaa data/minecraft/tags/blocks/fence_gates.json
 8d1d39bf8b53d42b406c236e0545544bfaa1ff0c data/minecraft/tags/blocks/leaves.json
 ba6fb4a1f46791db6fc87bfa81824542b1282b8c data/minecraft/tags/blocks/logs_that_burn.json
-65acefec42b7c31d4174e216313294e866246d95 data/minecraft/tags/blocks/mineable/pickaxe.json
+91317709ec4691bfb186ec51e1104ff9abd68ae8 data/minecraft/tags/blocks/mineable/pickaxe.json
 ee6c54faea3d9e4fff31be26b7e39b0cb9279d21 data/minecraft/tags/blocks/mineable/shovel.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
 317475200ac67ba079f459f292c4f1ff0cd2729e data/minecraft/tags/blocks/needs_iron_tool.json
@@ -18,4 +18,4 @@ f87b5352ad66539489d4b7995a1ab45be9a2d35d data/minecraft/tags/blocks/signs.json
 886f1e953fdc4c4bb1c1e15f0eff8591882e3005 data/minecraft/tags/blocks/wall_signs.json
 ba6fb4a1f46791db6fc87bfa81824542b1282b8c data/silver_innovation/tags/blocks/mahogany_logs.json
 c79998e53a789a3fc1f480afc67397f8490343a3 data/silver_innovation/tags/blocks/metal_detector_valuables.json
-9a9f3ea6bf7139931ffc1187b3df0b7d430e2ea0 data/silver_innovation/tags/blocks/needs_silver_tool.json
+855b16fae685854412a84e4f0353f6706e9cf927 data/silver_innovation/tags/blocks/needs_silver_tool.json

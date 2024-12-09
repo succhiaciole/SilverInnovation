@@ -215,6 +215,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.REINFORCED_SCAFFOLDING.get(),6)
+                .pattern("|#|")
+                .pattern("|@|")
+                .pattern("| |")
+                .define('#', ModItems.SILVER_INGOT.get())
+                .define('|', ModItems.SILVER_LIMB.get())
+                .define('@', Blocks.SCAFFOLDING)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.SILVER_BUTTON.get())
                 .requires(ModBlocks.SILVER_BLOCK.get())
                 .requires(Items.REDSTONE)

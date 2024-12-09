@@ -5,13 +5,19 @@ import net.coder.silver_innovation.block.custom.*;
 import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.util.ModWoodTypes;
 import net.coder.silver_innovation.worldgen.tree.MahoganyTreeGrower;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -40,6 +46,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_FOUNDRY = registerBlock("silver_foundry",
             () -> new SilverFoundryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> REINFORCED_SCAFFOLDING = BLOCKS.register("reinforced_scaffolding",
+            () -> new ReinforcedScaffoldingBlock(BlockBehaviour.Properties.of()
+                    .strength(3.0F, 6.0F)
+                    .noCollission()
+                    .sound(SoundType.LANTERN)
+                    .isValidSpawn(ModBlocks::never)
+                    .pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> STRAWBERRY_CROP = registerBlock("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> STRAWBERRY_BUSH = registerBlock("strawberry_bush",
@@ -62,11 +76,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling",
             () -> new SaplingBlock(new MahoganyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).randomTicks().instabreak().noOcclusion().noCollission()));
 
-    public static final RegistryObject<Block> MAHOGANY_SIGN = registerBlock("mahogany_sign",
+    public static final RegistryObject<Block> MAHOGANY_SIGN = BLOCKS.register("mahogany_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAHOGANY));
     public static final RegistryObject<Block> MAHOGANY_WALL_SIGN = registerBlock("mahogany_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MAHOGANY));
-    public static final RegistryObject<Block> MAHOGANY_HANGING_SIGN = registerBlock("mahogany_hanging_sign",
+    public static final RegistryObject<Block> MAHOGANY_HANGING_SIGN = BLOCKS.register("mahogany_hanging_sign",
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MAHOGANY));
     public static final RegistryObject<Block> MAHOGANY_WALL_HANGING_SIGN = registerBlock("mahogany_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAHOGANY));
@@ -101,6 +115,10 @@ public class ModBlocks {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
+    }
+
+    private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
+        return (boolean) false;
     }
 
 

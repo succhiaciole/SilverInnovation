@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "minecraft:gunpowder"
+    },
+    "@": {
+      "item": "minecraft:firework_star"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "item": "silver_innovation:flying_tnt"
+  },
+  "show_notification": true
+}

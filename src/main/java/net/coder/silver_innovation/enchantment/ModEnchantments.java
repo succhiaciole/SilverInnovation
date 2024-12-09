@@ -14,6 +14,8 @@ public class ModEnchantments {
 
     public static final RegistryObject<Enchantment> FACTOR = ENCHANTMENTS.register("factor",
             () -> new FactorEnchantment(Enchantment.Rarity.COMMON, EquipmentSlot.MAINHAND));
+    public static final RegistryObject<Enchantment> THICKNESS = ENCHANTMENTS.register("thickness",
+            () -> new ThicknessEnchantment(Enchantment.Rarity.RARE, EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

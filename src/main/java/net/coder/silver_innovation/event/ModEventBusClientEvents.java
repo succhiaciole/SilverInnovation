@@ -30,6 +30,9 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.SILVER_MISSLE.get(), SilverMissleRenderer::new);
+
         event.registerEntityRenderer(ModEntities.SILVER_SURPRISE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.FLAMED_SURPRISE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.FLYING_TNT.get(), ThrownItemRenderer::new);
     }
 }

@@ -40,6 +40,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
         this.dropSelf(ModBlocks.CARBON_DUST_BLOCK.get());
         this.dropSelf(ModBlocks.SILVER_FOUNDRY.get());
+        this.dropSelf(ModBlocks.REINFORCED_SCAFFOLDING.get());
 
         this.dropSelf(ModBlocks.MAHOGANY_LOG.get());
         this.dropSelf(ModBlocks.MAHOGANY_WOOD.get());

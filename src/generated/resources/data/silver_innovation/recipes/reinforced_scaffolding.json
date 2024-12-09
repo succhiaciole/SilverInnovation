@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silver_innovation:silver_ingot"
+    },
+    "@": {
+      "item": "minecraft:scaffolding"
+    },
+    "|": {
+      "item": "silver_innovation:silver_limb"
+    }
+  },
+  "pattern": [
+    "|#|",
+    "|@|",
+    "| |"
+  ],
+  "result": {
+    "count": 6,
+    "item": "silver_innovation:reinforced_scaffolding"
+  },
+  "show_notification": true
+}

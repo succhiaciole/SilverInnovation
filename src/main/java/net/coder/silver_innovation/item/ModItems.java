@@ -53,8 +53,13 @@ public class ModItems {
             () -> new SilverShortbowItem(new Item.Properties().durability(298).fireResistant()));
     public static final RegistryObject<Item> SILVER_MISSLE = ITEMS.register("silver_missle",
             () -> new SilverMissleItem(1.7f, new Item.Properties()));
+
     public static final RegistryObject<Item> SILVER_SURPRISE = ITEMS.register("silver_surprise",
             () -> new SilverSurpriseItem(new Item.Properties()));
+    public static final RegistryObject<Item> FLAMED_SURPRISE = ITEMS.register("flamed_surprise",
+            () -> new FlamedSurpriseItem(new Item.Properties()));
+    public static final RegistryObject<Item> FLYING_TNT = ITEMS.register("flying_tnt",
+            () -> new FlyingTntItem(new Item.Properties()));
 
     public static final RegistryObject<Item> SILVER_GOLEM_SPAWN_EGG = ITEMS.register("silver_golem_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SILVER_GOLEM, 7956848, 15265265, new Item.Properties()));
@@ -81,10 +86,13 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-    public static final RegistryObject<Item> MAHOGANY_SIGN = ITEMS.register("mahogany_item_sign",
+    public static final RegistryObject<Item> MAHOGANY_SIGN = ITEMS.register("mahogany_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAHOGANY_SIGN.get(), ModBlocks.MAHOGANY_WALL_SIGN.get()));
-    public static final RegistryObject<Item> MAHOGANY_HANGING_SIGN = ITEMS.register("mahogany_item_hanging_sign",
+    public static final RegistryObject<Item> MAHOGANY_HANGING_SIGN = ITEMS.register("mahogany_hanging_sign",
             () -> new HangingSignItem(ModBlocks.MAHOGANY_HANGING_SIGN.get(), ModBlocks.MAHOGANY_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> REINFORCED_SCAFFOLDING = ITEMS.register("reinforced_scaffolding",
+            () -> new ReinforcedScaffoldingItem(ModBlocks.REINFORCED_SCAFFOLDING.get(), new Item.Properties().fireResistant()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

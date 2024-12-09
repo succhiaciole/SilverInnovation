@@ -1,5 +1,7 @@
 package net.coder.silver_innovation.block.entity;
 
+import net.coder.silver_innovation.block.custom.SilverFoundryBlock;
+import net.coder.silver_innovation.item.ModItems;
 import net.coder.silver_innovation.recipe.SilverFoundryRecipe;
 import net.coder.silver_innovation.screen.SilverFoundryMenu;
 import net.minecraft.core.BlockPos;
@@ -26,17 +28,38 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return switch (slot) {
+                case 0, 1 -> true;
+                case 2 -> false;
+                default -> super.isItemValid(slot, stack);
+            };
+        }
+    };
 
     private static final int INPUT_SLOT_1 = 0;
     private static final int INPUT_SLOT_2 = 1;
     private static final int OUTPUT_SLOT = 2;
-    private static final int FUEL_SLOT = 3;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
+                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
+                            (index, stack) -> itemHandler.isItemValid(1, stack))),
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))),
+                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
+
 
     protected final ContainerData data;
     private int progress = 0;
@@ -45,9 +68,27 @@ public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if(cap == ForgeCapabilities.ITEM_HANDLER){
-            return lazyItemHandler.cast();
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
+            if (side == null) {
+                return lazyItemHandler.cast();
+            }
+
+            if (directionWrappedHandlerMap.containsKey(side)) {
+                Direction localDir = this.getBlockState().getValue(SilverFoundryBlock.FACING);
+
+                if (side == Direction.UP || side == Direction.DOWN) {
+                    return directionWrappedHandlerMap.get(side).cast();
+                }
+
+                return switch (localDir) {
+                    case EAST -> directionWrappedHandlerMap.get(side.getClockWise()).cast();
+                    case SOUTH -> directionWrappedHandlerMap.get(side).cast();
+                    case WEST -> directionWrappedHandlerMap.get(side.getCounterClockWise()).cast();
+                    default -> directionWrappedHandlerMap.get(side.getOpposite()).cast();
+                };
+            }
         }
+
         return super.getCapability(cap, side);
     }
 

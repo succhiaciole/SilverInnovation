@@ -1,9 +1,11 @@
-// 1.20.1	2024-12-04T20:08:30.5512488	Item Models: silver_innovation
+// 1.20.1	2024-12-08T12:02:59.880516	Item Models: silver_innovation
 5f943a9fcf744e57b697cc38b332a56d08b25ba5 assets/silver_innovation/models/item/anthracite.json
 5802f4eab294ccb7cca068a247d80aa5727a9f17 assets/silver_innovation/models/item/carbon_dust.json
-6212c9bf351e848818deb30563b7d935540902ef assets/silver_innovation/models/item/mahogany_item_hanging_sign.json
-af3f4a65684a70353dd98245b27f7ed345964573 assets/silver_innovation/models/item/mahogany_item_sign.json
+ea3da0a342a3e4dec6ecd0a042629bb1f25980bc assets/silver_innovation/models/item/flamed_surprise.json
+ad718188bf6df87a0450d35049a39c6035648cf4 assets/silver_innovation/models/item/flying_tnt.json
+bfcb07db4f8230506544e956ee9112457dc955f9 assets/silver_innovation/models/item/mahogany_hanging_sign.json
 3a7effd7c556ebb88d7718c2d4b4bd7f9b68bab2 assets/silver_innovation/models/item/mahogany_sapling.json
+455552fe107dd45950ac208d924ec9d5cf538e5a assets/silver_innovation/models/item/mahogany_sign.json
 ccb365fc58bfff672386024a59ed90ff8b498fb5 assets/silver_innovation/models/item/metal_detector.json
 50b350bc919e6e4d4dbcd1303b18d106876b665b assets/silver_innovation/models/item/raw_silver.json
 046d3c802d4dacf3b8c2e0fa51af06c17a994a1f assets/silver_innovation/models/item/scissors.json

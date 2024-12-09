@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "silver_innovation:mahogany_sign"
+          "name": "silver_innovation:reinforced_scaffolding"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "silver_innovation:blocks/mahogany_wall_sign"
+  "random_sequence": "silver_innovation:blocks/reinforced_scaffolding"
 }

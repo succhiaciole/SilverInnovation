@@ -3,7 +3,9 @@ package net.coder.silver_innovation.entity;
 import net.coder.silver_innovation.SilverInnovation;
 import net.coder.silver_innovation.entity.projectile.SilverMissleEntity;
 import net.coder.silver_innovation.entity.custom.SilverGolemEntity;
-import net.coder.silver_innovation.entity.projectile.SilverSurpriseEntity;
+import net.coder.silver_innovation.entity.projectile.bombs.FlyingTntEntity;
+import net.coder.silver_innovation.entity.projectile.bombs.FlamedSurpriseEntity;
+import net.coder.silver_innovation.entity.projectile.bombs.SilverSurpriseEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -25,12 +27,25 @@ public class ModEntities {
                     .clientTrackingRange(4)
                     .updateInterval(20)
                     .build(new ResourceLocation(SilverInnovation.MOD_ID, "silver_missle").toString()));
+
     public static final RegistryObject<EntityType<SilverSurpriseEntity>> SILVER_SURPRISE =
             ENTITY_TYPES.register("silver_surprise", () -> EntityType.Builder.<SilverSurpriseEntity>of(SilverSurpriseEntity::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F)
                     .clientTrackingRange(4)
                     .updateInterval(20)
                     .build(new ResourceLocation(SilverInnovation.MOD_ID, "silver_surprise").toString()));
+    public static final RegistryObject<EntityType<FlamedSurpriseEntity>> FLAMED_SURPRISE =
+            ENTITY_TYPES.register("flamed_surprise", () -> EntityType.Builder.<FlamedSurpriseEntity>of(FlamedSurpriseEntity::new, MobCategory.MISC)
+                    .sized(0.5F, 0.5F)
+                    .clientTrackingRange(4)
+                    .updateInterval(20)
+                    .build(new ResourceLocation(SilverInnovation.MOD_ID, "flamed_surprise").toString()));
+    public static final RegistryObject<EntityType<FlyingTntEntity>> FLYING_TNT =
+            ENTITY_TYPES.register("flying_tnt", () -> EntityType.Builder.<FlyingTntEntity>of(FlyingTntEntity::new, MobCategory.MISC)
+                    .sized(0.5F, 0.5F)
+                    .clientTrackingRange(4)
+                    .updateInterval(20)
+                    .build(new ResourceLocation(SilverInnovation.MOD_ID, "flying_tnt").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

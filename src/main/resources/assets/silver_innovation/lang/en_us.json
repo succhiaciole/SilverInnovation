@@ -5,9 +5,6 @@
   "item.silver_innovation.carbon_dust" : "Carbon Dust",
   "item.silver_innovation.silver_limb" : "Silver Limb",
 
-  "item.silver_innovation.mahogany_item_sign" : "Mahogany Sign",
-  "item.silver_innovation.mahogany_item_hanging_sign" : "Mahogany Hanging Sign",
-
   "item.silver_innovation.silver_golem_spawn_egg" : "Silver Golem Spawn Egg",
   "item.silver_innovation.silver_bow" : "Silver Bow",
   "item.silver_innovation.silver_longbow" : "Silver Longbow",
@@ -15,6 +12,8 @@
   "item.silver_innovation.silver_missle" : "Silver Missle",
   "item.silver_innovation.silver_upgrade_smithing_template" : "Smithing Template",
   "item.silver_innovation.silver_surprise" : "Silver Surprise",
+  "item.silver_innovation.flamed_surprise" : "Flamed Surprise",
+  "item.silver_innovation.flying_tnt" : "Flying TNT",
 
   "item.minecraft.potion.effect.freeze_potion" : "Freeze Potion",
   "item.minecraft.splash_potion.effect.freeze_potion" : "Splash Potion of Freeze",
@@ -43,6 +42,7 @@
   "item.silver_innovation.metal_detector" : "Metal Detector",
 
   "enchantment.silver_innovation.factor" : "Factor",
+  "enchantment.silver_innovation.thickness" : "Thickness",
 
   "creativetab.silver_innovation" : "Silver Innovation",
 
@@ -64,6 +64,7 @@
   "block.silver_innovation.carbon_ore" : "Carbon Ore",
   "block.silver_innovation.carbon_dust_block" : "Carbon Of Carbon Dust",
   "block.silver_innovation.silver_foundry" : "Silver Foundry",
+  "block.silver_innovation.reinforced_scaffolding" : "Reinforced Scaffolding",
 
   "block.silver_innovation.silver_stairs" : "Silver Stairs",
   "block.silver_innovation.silver_slab" : "Silver Slab",

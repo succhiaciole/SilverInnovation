@@ -1,0 +1,16 @@
+{
+  "type": "silver_innovation:silver_foundry",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "silver_innovation:flying_tnt"
+    },
+    {
+      "item": "silver_innovation:silver_upgrade_smithing_template"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "silver_innovation:silver_surprise"
+  }
+}

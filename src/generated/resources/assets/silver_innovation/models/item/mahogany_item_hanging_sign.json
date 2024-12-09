@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "silver_innovation:item/mahogany_item_hanging_sign"
-  }
-}

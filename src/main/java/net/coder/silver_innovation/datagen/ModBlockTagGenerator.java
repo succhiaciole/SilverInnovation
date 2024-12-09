@@ -11,6 +11,7 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
+import javax.swing.text.html.HTML;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagGenerator extends BlockTagsProvider {
@@ -43,6 +44,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     (ModBlocks.DEEPSLATE_CARBON_ORE.get()),
                         (ModBlocks.SILVER_ORE.get()),
                         (ModBlocks.DEEPSLATE_SILVER_ORE.get()),
+                        (ModBlocks.REINFORCED_SCAFFOLDING.get()),
                         (ModBlocks.CARBON_ORE.get()));
 
 
@@ -67,6 +69,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         (ModBlocks.SILVER_DOOR.get()),
                         (ModBlocks.SILVER_PRESSURE_PLATE.get()),
                         (ModBlocks.SILVER_BUTTON.get()),
+                        (ModBlocks.REINFORCED_SCAFFOLDING.get()),
                         (ModBlocks.SILVER_FOUNDRY.get()));
 
 
@@ -83,6 +86,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SILVER_PRESSURE_PLATE.get());
         this.tag(BlockTags.BUTTONS)
                 .add(ModBlocks.SILVER_BUTTON.get());
+
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAHOGANY_LOG.get())

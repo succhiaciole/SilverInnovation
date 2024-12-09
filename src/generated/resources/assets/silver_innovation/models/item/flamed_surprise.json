@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "silver_innovation:item/mahogany_item_sign"
+    "layer0": "silver_innovation:item/flamed_surprise"
   }
 }

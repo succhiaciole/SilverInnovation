@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "silver_innovation:mahogany_item_sign"
+          "name": "silver_innovation:mahogany_sign"
         }
       ],
       "rolls": 1.0
