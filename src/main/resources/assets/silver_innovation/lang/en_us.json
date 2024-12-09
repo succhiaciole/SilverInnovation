@@ -42,7 +42,9 @@
   "item.silver_innovation.metal_detector" : "Metal Detector",
 
   "enchantment.silver_innovation.factor" : "Factor",
+  "enchantment.silver_innovation.factor.desc" : "Sets every arrow shot to crit",
   "enchantment.silver_innovation.thickness" : "Thickness",
+  "enchantment.silver_innovation.thickness.desc" : "Enhances the power level of the hammer",
 
   "creativetab.silver_innovation" : "Silver Innovation",
 
