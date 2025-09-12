@@ -1,5 +1,6 @@
 package net.ohfired.silver_innovation.util;
 
+import net.minecraft.world.item.Items;
 import net.ohfired.silver_innovation.item.ModItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -10,7 +11,6 @@ public class ModItemProperties {
         makeNormalBow(ModItems.SILVER_BOW.get());
         makeSlowBow(ModItems.SILVER_LONGBOW.get());
         makeFastBow(ModItems.SILVER_SHORTBOW.get());
-
     }
 
     private static void makeNormalBow(Item item) {

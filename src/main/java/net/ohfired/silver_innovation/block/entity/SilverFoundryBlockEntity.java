@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-public class SilverFoundryBlockEntity extends BlockEntity implements MenuProvider {
+public class  SilverFoundryBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {

@@ -1,5 +1,6 @@
 package net.ohfired.silver_innovation.item.custom;
 
+import net.minecraftforge.event.ForgeEventFactory;
 import net.ohfired.silver_innovation.enchantment.ModEnchantments;
 import net.ohfired.silver_innovation.sound.ModSounds;
 import net.minecraft.sounds.SoundSource;
@@ -40,7 +41,7 @@ public class SilverLongbowItem extends BowItem {
             ItemStack itemstack = player.getProjectile(pStack);
 
             int i = this.getUseDuration(pStack) - pTimeLeft;
-            i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(pStack, pLevel, player, i, !itemstack.isEmpty() || flag);
+            i = ForgeEventFactory.onArrowLoose(pStack, pLevel, player, i, !itemstack.isEmpty() || flag);
             if (i < 0) return;
 
             if (!itemstack.isEmpty() || flag) {
@@ -77,6 +78,8 @@ public class SilverLongbowItem extends BowItem {
                         if (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.FACTOR.get(), pStack) > 0) {
                             abstractarrow.setCritArrow(true);
                         }
+
+                        abstractarrow.setPierceLevel((byte) 3);
 
                         pStack.hurtAndBreak(1, player, (p_289501_) -> {
                             p_289501_.broadcastBreakEvent(player.getUsedItemHand());

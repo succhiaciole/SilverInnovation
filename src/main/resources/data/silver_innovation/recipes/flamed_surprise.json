@@ -6,11 +6,11 @@
       "item": "silver_innovation:silver_surprise"
     },
     {
-      "item": "minecraft:lava_bucket"
+      "item": "minecraft:blaze_powder"
     }
   ],
   "result": {
-    "count": 2,
+    "count": 1,
     "item": "silver_innovation:flamed_surprise"
   }
 }

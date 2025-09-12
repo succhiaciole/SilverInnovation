@@ -39,7 +39,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ANTHRACITE.get());
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
-                        pOutput.accept(ModItems.SILVER_MISSLE.get());
+                        pOutput.accept(ModItems.SILVER_MISSILE.get());
                         pOutput.accept(ModItems.SILVER_SURPRISE.get());
                         pOutput.accept(ModItems.FLYING_TNT.get());
                         pOutput.accept(ModItems.FLAMED_SURPRISE.get());
@@ -76,6 +76,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.CARBON_DUST_BLOCK.get());
                         pOutput.accept(ModBlocks.SILVER_FOUNDRY.get());
                         pOutput.accept(ModItems.REINFORCED_SCAFFOLDING.get());
+                        pOutput.accept(ModItems.SILVER_SPIKES.get());
 
                         pOutput.accept(ModBlocks.SILVER_DOOR.get());
                         pOutput.accept(ModBlocks.SILVER_TRAPDOOR.get());

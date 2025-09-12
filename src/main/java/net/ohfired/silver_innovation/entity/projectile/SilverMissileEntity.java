@@ -1,5 +1,8 @@
 package net.ohfired.silver_innovation.entity.projectile;
 
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.phys.HitResult;
 import net.ohfired.silver_innovation.effect.ModEffects;
 import net.ohfired.silver_innovation.entity.ModEntities;
 import net.ohfired.silver_innovation.item.ModItems;
@@ -13,17 +16,17 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class SilverMissleEntity extends AbstractArrow {
+public class SilverMissileEntity extends AbstractArrow {
     private final Item referenceItem;
     private int duration = 10;
 
-    public SilverMissleEntity(EntityType<? extends AbstractArrow> type, Level level) {
+    public SilverMissileEntity(EntityType<? extends AbstractArrow> type, Level level) {
         super(type, level);
-        this.referenceItem = ModItems.SILVER_MISSLE.get();
+        this.referenceItem = ModItems.SILVER_MISSILE.get();
     }
 
-    public SilverMissleEntity(LivingEntity shooter, Level level, Item referenceItem) {
-        super(ModEntities.SILVER_MISSLE.get(), shooter, level);
+    public SilverMissileEntity(LivingEntity shooter, Level level, Item referenceItem) {
+        super(ModEntities.SILVER_MISSILE.get(), shooter, level);
         this.referenceItem = referenceItem;
     }
 

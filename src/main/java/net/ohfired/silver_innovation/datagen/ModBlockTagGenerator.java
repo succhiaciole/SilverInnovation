@@ -31,6 +31,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_STONE_TOOL);
 
+        this.tag(BlockTags.BEACON_BASE_BLOCKS)
+                .add(ModBlocks.SILVER_BLOCK.get());
+
         this.tag(ModTags.Blocks.NEEDS_SILVER_TOOL)
                 .add(ModBlocks.SILVER_SLAB.get(),
                     (ModBlocks.SILVER_STAIRS.get()),

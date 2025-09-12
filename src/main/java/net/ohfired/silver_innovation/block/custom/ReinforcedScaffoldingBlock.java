@@ -1,5 +1,7 @@
 package net.ohfired.silver_innovation.block.custom;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.ohfired.silver_innovation.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -28,9 +30,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterloggedBlock {
     private static final VoxelShape STABLE_SHAPE;
     private static final VoxelShape UNSTABLE_SHAPE;
-    private static final VoxelShape UNSTABLE_SHAPE_BOTTOM = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
+    private static final VoxelShape UNSTABLE_SHAPE_BOTTOM = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D);
     private static final VoxelShape BELOW_BLOCK = Shapes.block().move(0.0D, -1.0D, 0.0D);
-    public static final IntegerProperty REINF_STABILITY_DISTANCE = IntegerProperty.create("reinf_distance", 0, 20);
+    public static final IntegerProperty REINF_STABILITY_DISTANCE = IntegerProperty.create("reinf_distance", 0, 25);
     public static final IntegerProperty REINF_DISTANCE = REINF_STABILITY_DISTANCE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty BOTTOM = BlockStateProperties.BOTTOM;
@@ -50,6 +52,11 @@ public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterlogg
         } else {
             return Shapes.block();
         }
+    }
+
+    @Override
+    public boolean isScaffolding(BlockState state, LevelReader level, BlockPos pos, LivingEntity entity) {
+        return state.is(ModBlocks.REINFORCED_SCAFFOLDING.get());
     }
 
     public VoxelShape getInteractionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
@@ -97,8 +104,8 @@ public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterlogg
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         int i = getDistance(pLevel, pPos);
         BlockState blockstate = pState.setValue(REINF_DISTANCE, i).setValue(BOTTOM, this.isBottom(pLevel, pPos, i));
-        if (blockstate.getValue(REINF_DISTANCE) == 20) {
-            if (pState.getValue(REINF_DISTANCE) == 20) {
+        if (blockstate.getValue(REINF_DISTANCE) == 25) {
+            if (pState.getValue(REINF_DISTANCE) == 25) {
                 FallingBlockEntity.fall(pLevel, pPos, blockstate);
             } else {
                 pLevel.destroyBlock(pPos, true);
@@ -111,7 +118,7 @@ public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterlogg
 
     @Override
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
-        return getDistance(pLevel, pPos) < 20;
+        return getDistance(pLevel, pPos) < 25;
     }
 
     public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
@@ -133,7 +140,7 @@ public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterlogg
     public static int getDistance(BlockGetter pLevel, BlockPos pPos) {
         BlockPos.MutableBlockPos blockpos$mutableblockpos = pPos.mutable().move(Direction.DOWN);
         BlockState blockstate = pLevel.getBlockState(blockpos$mutableblockpos);
-        int i = 20;
+        int i = 25;
         if (blockstate.is(ModBlocks.REINFORCED_SCAFFOLDING.get())) {
             i = blockstate.getValue(REINF_DISTANCE);
         } else if (blockstate.isFaceSturdy(pLevel, blockpos$mutableblockpos, Direction.UP)) {
@@ -155,15 +162,15 @@ public class ReinforcedScaffoldingBlock extends Block implements SimpleWaterlogg
 
     static {
         VoxelShape voxelshape = Block.box(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-        VoxelShape voxelshape1 = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 3.0D);
-        VoxelShape voxelshape2 = Block.box(14.0D, 0.0D, 0.0D, 16.0D, 16.0D, 3.0D);
-        VoxelShape voxelshape3 = Block.box(0.0D, 0.0D, 14.0D, 3.0D, 16.0D, 16.0D);
+        VoxelShape voxelshape1 = Block.box(0.0D, 0.0D, 0.0D, 2.0D, 16.0D, 2.0D);
+        VoxelShape voxelshape2 = Block.box(14.0D, 0.0D, 0.0D, 16.0D, 16.0D, 2.0D);
+        VoxelShape voxelshape3 = Block.box(0.0D, 0.0D, 14.0D, 2.0D, 16.0D, 16.0D);
         VoxelShape voxelshape4 = Block.box(14.0D, 0.0D, 14.0D, 16.0D, 16.0D, 16.0D);
         STABLE_SHAPE = Shapes.or(voxelshape, voxelshape1, voxelshape2, voxelshape3, voxelshape4);
-        VoxelShape voxelshape5 = Block.box(0.0D, 0.0D, 0.0D, 3.0D, 3.0D, 16.0D);
-        VoxelShape voxelshape6 = Block.box(14.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
-        VoxelShape voxelshape7 = Block.box(0.0D, 0.0D, 14.0D, 16.0D, 3.0D, 16.0D);
-        VoxelShape voxelshape8 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 3.0D);
+        VoxelShape voxelshape5 = Block.box(0.0D, 0.0D, 0.0D, 2.0D, 2.0D, 16.0D);
+        VoxelShape voxelshape6 = Block.box(14.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D);
+        VoxelShape voxelshape7 = Block.box(0.0D, 0.0D, 14.0D, 16.0D, 2.0D, 16.0D);
+        VoxelShape voxelshape8 = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 2.0D);
         UNSTABLE_SHAPE = Shapes.or(UNSTABLE_SHAPE_BOTTOM, STABLE_SHAPE, voxelshape6, voxelshape5, voxelshape8, voxelshape7);
     }
 }

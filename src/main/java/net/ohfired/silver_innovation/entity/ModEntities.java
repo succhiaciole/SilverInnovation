@@ -1,7 +1,7 @@
 package net.ohfired.silver_innovation.entity;
 
 import net.ohfired.silver_innovation.SilverInnovation;
-import net.ohfired.silver_innovation.entity.projectile.SilverMissleEntity;
+import net.ohfired.silver_innovation.entity.projectile.SilverMissileEntity;
 import net.ohfired.silver_innovation.entity.custom.SilverGolemEntity;
 import net.ohfired.silver_innovation.entity.projectile.bombs.FlyingTntEntity;
 import net.ohfired.silver_innovation.entity.projectile.bombs.FlamedSurpriseEntity;
@@ -21,8 +21,8 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SilverGolemEntity>> SILVER_GOLEM =
             ENTITY_TYPES.register("silver_golem", () -> EntityType.Builder.of(SilverGolemEntity::new, MobCategory.CREATURE)
                     .sized(1.1f, 2.9f).build("silver_golem"));
-    public static final RegistryObject<EntityType<SilverMissleEntity>> SILVER_MISSLE =
-            ENTITY_TYPES.register("silver_missle", () -> EntityType.Builder.<SilverMissleEntity>of(SilverMissleEntity::new, MobCategory.MISC)
+    public static final RegistryObject<EntityType<SilverMissileEntity>> SILVER_MISSILE =
+            ENTITY_TYPES.register("silver_missle", () -> EntityType.Builder.<SilverMissileEntity>of(SilverMissileEntity::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F)
                     .clientTrackingRange(4)
                     .updateInterval(20)

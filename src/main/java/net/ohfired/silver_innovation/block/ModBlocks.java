@@ -41,13 +41,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> CARBON_ORE = registerBlock("carbon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE), UniformInt.of(2,5)));
     public static final RegistryObject<Block> CARBON_DUST_BLOCK = registerBlock("carbon_dust_block",
-            () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
+            () -> new CarbonDustBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
     public static final RegistryObject<Block> SILVER_FOUNDRY = registerBlock("silver_foundry",
             () -> new SilverFoundryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> SILVER_SPIKES = BLOCKS.register("silver_spikes",
+            () -> new SilverSpikesBlock(BlockBehaviour.Properties.copy(Blocks.COBWEB).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> REINFORCED_SCAFFOLDING = BLOCKS.register("reinforced_scaffolding",
             () -> new ReinforcedScaffoldingBlock(BlockBehaviour.Properties.of()
                     .strength(3.0F, 6.0F)
+                    .dynamicShape()
                     .noCollission()
                     .sound(SoundType.LANTERN)
                     .isValidSpawn(ModBlocks::never)

@@ -9,7 +9,7 @@
   "item.silver_innovation.silver_bow" : "Silver Bow",
   "item.silver_innovation.silver_longbow" : "Silver Longbow",
   "item.silver_innovation.silver_shortbow" : "Silver Shortbow",
-  "item.silver_innovation.silver_missle" : "Silver Missle",
+  "item.silver_innovation.silver_missile" : "Silver Missile",
   "item.silver_innovation.silver_upgrade_smithing_template" : "Smithing Template",
   "item.silver_innovation.silver_surprise" : "Silver Surprise",
   "item.silver_innovation.flamed_surprise" : "Flamed Surprise",
@@ -31,6 +31,7 @@
   "item.silver_innovation.silver_hoe" : "Silver Hoe",
   "item.silver_innovation.silver_hammer" : "Silver Hammer",
   "item.silver_innovation.scissors" : "Scissors",
+  "item.silver_innovation.silver_shield" : "Silver Shield",
 
   "item.silver_innovation.strawberry" : "Strawberry",
   "item.silver_innovation.silver_strawberry" : "Silver Strawberry",
@@ -39,12 +40,14 @@
 
   "item.silver_innovation.anthracite" : "Anthracite",
 
+  "item.silver_innovation.silver_spikes" : "Silver Spikes",
+
   "item.silver_innovation.metal_detector" : "Metal Detector",
 
   "enchantment.silver_innovation.factor" : "Factor",
   "enchantment.silver_innovation.factor.desc" : "Sets every arrow shot to crit",
   "enchantment.silver_innovation.thickness" : "Thickness",
-  "enchantment.silver_innovation.thickness.desc" : "Enhances the power level of the hammer",
+  "enchantment.silver_innovation.thickness.desc" : "Enhances the length level of the hammer",
 
   "creativetab.silver_innovation" : "Silver Innovation",
 
@@ -64,9 +67,10 @@
   "block.silver_innovation.deepslate_silver_ore" : "Deepslate Silver Ore",
   "block.silver_innovation.deepslate_carbon_ore" : "Deepslate Carbon Ore",
   "block.silver_innovation.carbon_ore" : "Carbon Ore",
-  "block.silver_innovation.carbon_dust_block" : "Carbon Of Carbon Dust",
+  "block.silver_innovation.carbon_dust_block" : "Block Of Carbon Dust",
   "block.silver_innovation.silver_foundry" : "Silver Foundry",
   "block.silver_innovation.reinforced_scaffolding" : "Reinforced Scaffolding",
+  "block.silver_innovation.silver_spikes" : "Silver Spikes",
 
   "block.silver_innovation.silver_stairs" : "Silver Stairs",
   "block.silver_innovation.silver_slab" : "Silver Slab",
@@ -80,9 +84,10 @@
 
   "entity.minecraft.villager.silver_innovation.silver_smither" : "Silver Smither",
   "entity.silver_innovation.silver_golem" : "Silver Golem",
-  "entity.silver_innovation.silver_missle" : "Silver Missle",
+  "entity.silver_innovation.silver_missile" : "Silver Missile",
 
-  "sounds.silver_innovation.silver_bow" : "Silver Bow",
+  "sounds.silver_innovation.silver_bow" : "Silver bow shot",
+  "sounds.silver_innovation.silver_longbow" : "Silver longbow shot",
 
   "effect.silver_innovation.freeze" : "Freeze"
 }

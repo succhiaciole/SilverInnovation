@@ -17,8 +17,8 @@ import net.minecraft.world.phys.HitResult;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HammerItem extends DiggerItem {
-    public HammerItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Item.Properties pProperties) {
+public class SilverHammerItem extends DiggerItem {
+    public SilverHammerItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Item.Properties pProperties) {
         super((float)pAttackDamageModifier, pAttackSpeedModifier, pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
     }
 
@@ -35,6 +35,7 @@ public class HammerItem extends DiggerItem {
         ItemStack mainHandItem = player.getMainHandItem();
         int mod = (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.THICKNESS.get(), mainHandItem));
         if (mod > 0) range = mod;
+
 
         if (traceResult.getDirection() == Direction.DOWN || traceResult.getDirection() == Direction.UP) {
             for (int x = -range; x <= range; x++) {

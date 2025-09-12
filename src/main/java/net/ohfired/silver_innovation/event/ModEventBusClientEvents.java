@@ -4,7 +4,7 @@ import net.ohfired.silver_innovation.SilverInnovation;
 import net.ohfired.silver_innovation.block.entity.ModBlockEntities;
 import net.ohfired.silver_innovation.entity.ModEntities;
 import net.ohfired.silver_innovation.entity.client.ModModelLayers;
-import net.ohfired.silver_innovation.entity.client.renderer.SilverMissleRenderer;
+import net.ohfired.silver_innovation.entity.client.renderer.SilverMissileRenderer;
 import net.ohfired.silver_innovation.entity.client.SilverGolemModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -29,7 +29,7 @@ public class ModEventBusClientEvents {
 
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntities.SILVER_MISSLE.get(), SilverMissleRenderer::new);
+        event.registerEntityRenderer(ModEntities.SILVER_MISSILE.get(), SilverMissileRenderer::new);
 
         event.registerEntityRenderer(ModEntities.SILVER_SURPRISE.get(), ThrownItemRenderer::new);
         event.registerEntityRenderer(ModEntities.FLAMED_SURPRISE.get(), ThrownItemRenderer::new);

@@ -3,7 +3,7 @@ package net.ohfired.silver_innovation.event;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.ohfired.silver_innovation.SilverInnovation;
 import net.ohfired.silver_innovation.item.ModItems;
-import net.ohfired.silver_innovation.item.custom.HammerItem;
+import net.ohfired.silver_innovation.item.custom.SilverHammerItem;
 import net.ohfired.silver_innovation.villager.ModVillagers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -32,12 +32,12 @@ public class ModEvents {
         int range = 1;
         ItemStack mainHandItem = player.getMainHandItem();
 
-        if (mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
+        if (mainHandItem.getItem() instanceof SilverHammerItem hammer && player instanceof ServerPlayer serverPlayer) {
             BlockPos initialBlockPos = event.getPos();
             if (HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
-            for (BlockPos pos : HammerItem.getBlocksToBeDestroyed(range, initialBlockPos, serverPlayer)) {
+            for (BlockPos pos : SilverHammerItem.getBlocksToBeDestroyed(range, initialBlockPos, serverPlayer)) {
                 if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
                     continue;
                 }
@@ -121,7 +121,7 @@ public class ModEvents {
 
                 trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 7),
-                        new ItemStack(ModItems.SILVER_MISSLE.get(), 4),
+                        new ItemStack(ModItems.SILVER_MISSILE.get(), 4),
                         8, 1, 0.75f));
 
                 trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
