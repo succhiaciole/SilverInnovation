@@ -74,7 +74,7 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_HOE = ITEMS.register("silver_hoe",
             () -> new HoeItem(ModToolTiers.SILVER,0,-1.4f, new Item.Properties()));
     public static final RegistryObject<Item> SILVER_HAMMER = ITEMS.register("silver_hammer",
-            () -> new SilverHammerItem(ModToolTiers.SILVER, 3,-2.9f, new Item.Properties().durability(879)));
+            () -> new SilverHammerItem(ModToolTiers.SILVER, 3,-2f, new Item.Properties().durability(965)));
 
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new ModArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.HELMET, new Item.Properties()));

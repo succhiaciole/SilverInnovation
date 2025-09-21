@@ -29,7 +29,8 @@ public class ModEvents {
     @SubscribeEvent
     public static void onHammerUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
-        int range = 1;
+        int range = 0;
+        int width = 0;
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (mainHandItem.getItem() instanceof SilverHammerItem hammer && player instanceof ServerPlayer serverPlayer) {
@@ -37,7 +38,7 @@ public class ModEvents {
             if (HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
-            for (BlockPos pos : SilverHammerItem.getBlocksToBeDestroyed(range, initialBlockPos, serverPlayer)) {
+            for (BlockPos pos : SilverHammerItem.getBlocksToBeDestroyed(width, range, initialBlockPos, serverPlayer)) {
                 if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
                     continue;
                 }
@@ -158,6 +159,7 @@ public class ModEvents {
                         new ItemStack(Items.EMERALD, 17),
                         new ItemStack(ModItems.SILVER_HAMMER.get(), 1),
                         3, 1, 5f));
+
             }
         }
     }

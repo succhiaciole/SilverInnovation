@@ -50,11 +50,11 @@ public class SilverGolemAttackGoal extends MeleeAttackGoal {
     }
 
     protected void resetAttackCooldown() {
-        this.ticksUntilNextAttack = this.adjustedTickDelay(attackDelay = 1);
+        this.ticksUntilNextAttack = this.adjustedTickDelay(attackDelay = 4);
     }
 
     protected boolean isTimeToAttack() {
-        return this.ticksUntilNextAttack <= 0;
+        return this.ticksUntilNextAttack <= 5;
     }
 
     protected boolean isTimeToStartAttackAnimation() {

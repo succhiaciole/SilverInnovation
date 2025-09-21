@@ -48,6 +48,8 @@
   "enchantment.silver_innovation.factor.desc" : "Sets every arrow shot to crit",
   "enchantment.silver_innovation.thickness" : "Thickness",
   "enchantment.silver_innovation.thickness.desc" : "Enhances the length level of the hammer",
+  "enchantment.silver_innovation.deepseek" : "Deepseek",
+  "enchantment.silver_innovation.deepseek.desc" : "Enhances the width level of the hammer",
 
   "creativetab.silver_innovation" : "Silver Innovation",
 

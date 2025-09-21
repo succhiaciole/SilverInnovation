@@ -66,7 +66,6 @@ public class CarbonDustBlock extends FallingBlock {
         if (!pOldState.is(pState.getBlock())) {
             if (pLevel.hasNeighborSignal(pPos)) {
                 onCaughtFire(pState, pLevel, pPos, null, null);
-                pLevel.removeBlock(pPos, false);
             }
         }
     }
@@ -74,7 +73,6 @@ public class CarbonDustBlock extends FallingBlock {
     public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, BlockPos pFromPos, boolean pIsMoving) {
         if (pLevel.hasNeighborSignal(pPos)) {
             onCaughtFire(pState, pLevel, pPos, null, null);
-            pLevel.removeBlock(pPos, false);
         }
     }
 

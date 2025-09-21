@@ -1,6 +1,5 @@
 package net.ohfired.silver_innovation.util;
 
-import net.minecraft.world.item.Items;
 import net.ohfired.silver_innovation.item.ModItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;

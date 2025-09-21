@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 
 public class SilverMissileEntity extends AbstractArrow {
     private final Item referenceItem;
-    private int duration = 10;
+    private int duration = 5;
 
     public SilverMissileEntity(EntityType<? extends AbstractArrow> type, Level level) {
         super(type, level);

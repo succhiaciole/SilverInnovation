@@ -22,7 +22,7 @@ public class SilverHammerItem extends DiggerItem {
         super((float)pAttackDamageModifier, pAttackSpeedModifier, pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
     }
 
-    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayer player) {
+    public static List<BlockPos> getBlocksToBeDestroyed(int width, int range, BlockPos initalBlockPos, ServerPlayer player) {
         List<BlockPos> positions = new ArrayList<>();
 
         BlockHitResult traceResult = player.level().clip(new ClipContext(player.getEyePosition(1f),
@@ -36,11 +36,16 @@ public class SilverHammerItem extends DiggerItem {
         int mod = (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.THICKNESS.get(), mainHandItem));
         if (mod > 0) range = mod;
 
+        int mod2 = (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.DEEPSEEK.get(), mainHandItem));
+        if (mod2 > 0) width = mod2;
+
 
         if (traceResult.getDirection() == Direction.DOWN || traceResult.getDirection() == Direction.UP) {
             for (int x = -range; x <= range; x++) {
                 for (int y = -range; y <= range; y++) {
-                    positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
+                    for (int z = -width; z <= width; z++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + z, initalBlockPos.getZ() + y));
+                    }
                 }
             }
         }
@@ -48,7 +53,9 @@ public class SilverHammerItem extends DiggerItem {
         if(traceResult.getDirection() == Direction.NORTH || traceResult.getDirection() == Direction.SOUTH) {
             for(int x = -range; x <= range; x++) {
                 for(int y = -range; y <= range; y++) {
-                    positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
+                    for (int z = -width; z <= width; z++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ() + z));
+                    }
                 }
             }
         }
@@ -56,7 +63,9 @@ public class SilverHammerItem extends DiggerItem {
         if(traceResult.getDirection() == Direction.EAST || traceResult.getDirection() == Direction.WEST) {
             for(int x = -range; x <= range; x++) {
                 for(int y = -range; y <= range; y++) {
-                    positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                    for (int z = -width; z <= width; z++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + z, initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                    }
                 }
             }
         }
